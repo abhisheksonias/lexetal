@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lexetal Resources - Legal and Tax Resources, Articles, and Guides">
+    <meta name="keywords"
+        content="legal resources, tax guides, legal articles, tax articles, law resources, tax resources">
+    <meta name="author" content="Lexetal">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lexetal.com/resources.html">
+    <meta property="og:title" content="Resources - Lexetal Professional Law and Tax Consultancy">
+    <meta property="og:description" content="Access our library of legal and tax resources, articles, and guides">
+    <meta property="og:image" content="https://lexetal.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lexetal.com/resources.html">
+    <meta property="twitter:title" content="Resources - Lexetal Professional Law and Tax Consultancy">
+    <meta property="twitter:description" content="Access our library of legal and tax resources, articles, and guides">
+    <meta property="twitter:image" content="https://lexetal.com/images/twitter-image.jpg">
+
+    <title>Resources - Lexetal</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo2.png">
+    <link rel="shortcut icon" href="images/logo2.png">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lexetal-light': '#eaeaea',
+                        'lexetal-dark': '#1a1a1a',
+                        'lexetal-accent': '#ffda57',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Lexetal",
+      "url": "https://lexetal.com",
+      "logo": "https://lexetal.com/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Legal Street, Suite 100",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/lexetal",
+        "https://www.linkedin.com/company/lexetal",
+        "https://twitter.com/lexetal",
+        "https://www.instagram.com/lexetal"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lexetal.com/index.html"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resources",
+        "item": "https://lexetal.com/resources.html"
+      }]
+    }
+    </script>
+
+    <!-- Structured Data for Blog Articles -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "headline": "Lexetal Legal and Tax Resources",
+      "description": "Access our library of legal and tax resources, articles, and guides to help you navigate complex legal and tax matters.",
+      "url": "https://lexetal.com/resources.html",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Understanding the New Tax Legislation",
+          "description": "An in-depth analysis of the recent tax legislation and its implications for individuals and businesses.",
+          "datePublished": "2023-06-15",
+          "author": {
+            "@type": "Person",
+            "name": "Jane Smith"
+          },
+          "url": "https://lexetal.com/articles/understanding-tax-legislation.html"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Protecting Your Intellectual Property",
+          "description": "Learn about the different types of intellectual property protection and how to safeguard your creative assets.",
+          "datePublished": "2023-05-28",
+          "author": {
+            "@type": "Person",
+            "name": "Michael Johnson"
+          },
+          "url": "https://lexetal.com/articles/protecting-intellectual-property.html"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Navigating Employment Law Changes",
+          "description": "A guide to recent changes in employment law and how they affect employers and employees.",
+          "datePublished": "2023-05-10",
+          "author": {
+            "@type": "Person",
+            "name": "John Doe"
+          },
+          "url": "https://lexetal.com/articles/employment-law-changes.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Custom CSS -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .animate-bounce-subtle {
+                animation: bounce-subtle 2s infinite;
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            .animate-float-delay {
+                animation: float 3s ease-in-out infinite;
+                animation-delay: 1.5s;
+            }
+            .bg-grid-pattern {
+                background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+        }
+        
+        @keyframes bounce-subtle {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        body {
+            background-color: #eaeaea;
+            color: #1a1a1a;
+        }
+        .btn-primary {
+            background-color: #ffda57;
+            color: #1a1a1a;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: rgba(255, 218, 87, 0.8);
+        }
+        .nav-link {
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ffda57;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .resource-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .resource-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .resource-card:hover img {
+            transform: scale(1.05);
+        }
+        .resource-card img {
+            transition: all 0.3s ease;
+        }
+        
+        /* Filter Button Styles */
+        .filter-btn {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            border: 2px solid transparent;
+        }
+        .filter-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+        .filter-btn.active {
+            background-color: #ffda57;
+            color: #1a1a1a;
+            border-color: #ffda57;
+        }
+        
+        /* Content visibility for filtering */
+        .content-item {
+            transition: all 0.3s ease;
+        }
+        .content-item.hidden {
+            display: none;
+        }
+        
+        /* Scroll animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="shadow-lg sticky top-0 z-50 border-b-2" style="background-color: #1a1a1a; border-color: #ffda57;">
+        <div class="container mx-auto px-2 lg:px-6">
+            <div class="flex justify-between items-center h-22">
+                <!-- Logo -->
+                <div class="flex h-20 items-center">
+                    <a href="index.html"
+                        class="flex items-center gap-3 group transition-transform duration-300 ease-in-out hover:scale-105">
+                        <img src="images/logo.png" alt="Lexetal - Legal & Tax Solutions"
+                            class="h-14 w-auto drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
+                        <!-- <span class="text-xl font-bold text-white tracking-wide group-hover:text-[#ffda57] transition-colors duration-300">
+                            Lexetal
+                        </span> -->
+                    </a>
+                </div>
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Home</a>
+                    <a href="about.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">About</a>
+                    <a href="services.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Services</a>
+                    <a href="resources.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Resources</a>
+                    <div class="ml-4 pl-4 border-l border-gray-600">
+                        <button style="background-color: #ffda57;"
+                            class="px-6 py-2 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:brightness-110">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-white focus:outline-none p-2 rounded-lg transition-colors duration-300 hover:bg-gray-800">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-700">
+                <div class="flex flex-col space-y-2 py-4">
+                    <a href="index.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Home</a>
+                    <a href="about.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">About</a>
+                    <a href="services.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Services</a>
+                    <a href="resources.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Resources</a>
+                    <div class="px-4 pt-4 border-t border-gray-700 mt-2">
+                        <button style="background-color: #ffda57;"
+                            class="w-full px-6 py-3 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24">
+            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+            <div class="container mx-auto px-4 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Hero Content -->
+                    <div class="mb-8">
+                        <span class="inline-block px-4 py-2 text-sm font-semibold text-gray-600 bg-yellow-100 rounded-full mb-6 animate-bounce-subtle">
+                            📚 Knowledge Hub
+                        </span>
+                        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            Resources & 
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-amber-600">
+                                Insights
+                            </span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                            Stay informed with our comprehensive collection of legal and tax resources, expert insights, and educational content designed to empower your decision-making.
+                        </p>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2" id="blog-count">50+</div>
+                            <div class="text-sm text-gray-600 font-medium">Expert Articles</div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2" id="video-count">25+</div>
+                            <div class="text-sm text-gray-600 font-medium">Educational Videos</div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2">1000+</div>
+                            <div class="text-sm text-gray-600 font-medium">Hours of Content</div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2">24/7</div>
+                            <div class="text-sm text-gray-600 font-medium">Access Available</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="scrollToSection('blogs')" class="bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <span class="flex items-center justify-center gap-2">
+                                📖 Browse Articles
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <button onclick="scrollToSection('videos')" class="bg-white text-gray-900 border-2 border-gray-200 px-8 py-4 rounded-full font-semibold hover:border-yellow-500 hover:text-yellow-600 transform hover:scale-105 transition-all duration-300">
+                            <span class="flex items-center justify-center gap-2">
+                                🎥 Watch Videos
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating elements for visual appeal -->
+            <div class="absolute top-20 left-10 w-20 h-20 bg-yellow-200 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-float-delay"></div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="bg-white py-8 border-b border-gray-100">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+                    <!-- Content Type Filter -->
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="filterContent('all')" class="filter-btn active px-6 py-2 rounded-full font-medium transition-all duration-300" data-filter="all">
+                            All Content
+                        </button>
+                        <button onclick="filterContent('blogs')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-300" data-filter="blogs">
+                            📖 Articles
+                        </button>
+                        <button onclick="filterContent('videos')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-300" data-filter="videos">
+                            🎥 Videos
+                        </button>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="relative w-full lg:w-80">
+                        <input type="text" id="search-input" placeholder="Search resources..." 
+                               class="w-full px-4 py-3 pl-12 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        <svg class="absolute left-4 top-3.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs" class="py-16 lg:py-20 bg-gray-50">
+            <div class="container mx-auto px-4 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 text-sm font-semibold text-yellow-700 bg-yellow-100 rounded-full mb-4">
+                        📚 Expert Insights
+                    </span>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Latest Articles & Blogs
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Stay updated with the latest legal and tax insights from our team of experts.
+                    </p>
+                </div>
+
+                <!-- Blog Grid -->
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Blog Card 1 -->
+                    <article class="content-item blog-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Tax Legislation" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Tax Law</span>
+                            </div>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="bg-white rounded-full p-2 shadow-lg">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>June 15, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                                Understanding the New Tax Legislation
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">
+                                An in-depth analysis of the recent tax legislation and its implications for individuals and businesses in the current fiscal year.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                         alt="Jane Smith" 
+                                         class="w-8 h-8 rounded-full mr-3">
+                                    <span class="text-sm text-gray-700 font-medium">Jane Smith</span>
+                                </div>
+                                <button class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                                    Read More →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="content-item blog-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Intellectual Property" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">IP Law</span>
+                            </div>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="bg-white rounded-full p-2 shadow-lg">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>May 28, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>7 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                                Protecting Your Intellectual Property
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">
+                                Learn about the different types of intellectual property protection and how to safeguard your creative assets in today's digital world.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                         alt="Michael Johnson" 
+                                         class="w-8 h-8 rounded-full mr-3">
+                                    <span class="text-sm text-gray-700 font-medium">Michael Johnson</span>
+                                </div>
+                                <button class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                                    Read More →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="content-item blog-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Employment Law" 
+                                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute top-4 left-4">
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">Employment</span>
+                            </div>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="bg-white rounded-full p-2 shadow-lg">
+                                    <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>May 10, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
+                                Navigating Employment Law Changes
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3">
+                                A comprehensive guide to recent changes in employment law and how they affect both employers and employees.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" 
+                                         alt="John Doe" 
+                                         class="w-8 h-8 rounded-full mr-3">
+                                    <span class="text-sm text-gray-700 font-medium">John Doe</span>
+                                </div>
+                                <button class="text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+                                    Read More →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center">
+                    <button class="bg-white text-gray-900 border-2 border-gray-200 px-8 py-4 rounded-full font-semibold hover:border-yellow-500 hover:text-yellow-600 transform hover:scale-105 transition-all duration-300">
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="py-16 lg:py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="inline-block px-4 py-2 text-sm font-semibold text-yellow-700 bg-yellow-100 rounded-full mb-4">
+                        🎥 Educational Content
+                    </span>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Expert Video Insights
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Watch our comprehensive video library featuring expert analysis and practical guidance.
+                    </p>
+                </div>
+
+                <!-- Featured Video -->
+                <div class="mb-16">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+                            <div class="aspect-video">
+                                <iframe id="featured-video" 
+                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                        title="Featured Video" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen
+                                        class="w-full h-full">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                                Complete Guide to Tax Planning 2024
+                            </h3>
+                            <p class="text-gray-600">
+                                Our comprehensive overview of tax planning strategies for the current year.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Grid -->
+                <div id="video-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Video Card 1 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Understanding GST Compliance')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="GST Compliance" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">15:32</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>March 15, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>1.2K views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Understanding GST Compliance
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                A detailed explanation of GST compliance requirements and best practices for businesses.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 2 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Corporate Law Essentials')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="Corporate Law" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">22:45</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>March 8, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>950 views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Corporate Law Essentials
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Essential corporate law concepts every business owner should understand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 3 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Investment Tax Strategies')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="Investment Tax" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">18:20</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>February 28, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>1.8K views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Investment Tax Strategies
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Smart tax strategies for maximizing your investment returns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 4 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Legal Contract Basics')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="Legal Contracts" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">12:15</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>February 20, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>750 views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Legal Contract Basics
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Understanding the fundamentals of legal contracts and agreements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 5 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Startup Legal Guide')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="Startup Legal" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">25:30</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>February 15, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>2.1K views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Complete Startup Legal Guide
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Everything you need to know about legal requirements for startups.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 6 -->
+                    <div class="content-item video-item bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" onclick="loadVideo('dQw4w9WgXcQ', 'Tax Audit Preparation')">
+                        <div class="relative">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" 
+                                 alt="Tax Audit" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-90 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-semibold">20:45</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>February 10, 2024</span>
+                                <span class="mx-2">•</span>
+                                <span>1.5K views</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
+                                Tax Audit Preparation Guide
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Step-by-step guide to preparing for a tax audit effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center">
+                    <button class="bg-gray-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transform hover:scale-105 transition-all duration-300">
+                        Load More Videos
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-16 lg:py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                        Stay Updated with Latest Resources
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Subscribe to get notified when we publish new articles and videos
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" 
+                               class="flex-1 px-6 py-4 rounded-full border-0 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button class="bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-4">
+                        No spam, unsubscribe at any time.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400">
+        <div class="container mx-auto px-4 lg:px-8 pt-20 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-">
+                        <img src="/images/logo2.png" alt="Lexetal Logo" class="h-20 w-20">
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-xs">
+                        India's leading network of tax and legal professionals, driven by knowledge, integrity,
+                        and commitment.
+                    </p>
+                    <div class="flex space-x-5 mt-6">
+                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white tracking-wider uppercase">Company</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Our Team</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white tracking-wider uppercase mb-6">Contact Us</h4>
+                    <ul class="mt-4 space-y-6">
+                        <li class="flex items-start group">
+                            <div
+                                class="bg-yellow-400 p-2 rounded-full mr-4 flex-shrink-0 group-hover:bg-yellow-300 transition-colors">
+                                <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Call us</p>
+                                <a href="tel:+910123456789"
+                                    class="text-white font-medium hover:text-yellow-400 transition-colors text-lg">
+                                    (+91) 012-345-6789
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div
+                                class="bg-yellow-400 p-2 rounded-full mr-4 flex-shrink-0 group-hover:bg-yellow-300 transition-colors">
+                                <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Email us</p>
+                                <a href="mailto:info@lexetal.com"
+                                    class="text-white font-medium hover:text-yellow-400 transition-colors text-lg">
+                                    info@lexetal.com
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start group">
+                            <div
+                                class="bg-yellow-400 p-2 rounded-full mr-4 flex-shrink-0 group-hover:bg-yellow-300 transition-colors">
+                                <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Visit us</p>
+                                <p class="text-white font-medium text-base leading-relaxed">
+                                    123 Business District,<br>
+                                    New Delhi, India 110001
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-8  justify-center border-t border-gray-800 flex flex-col sm:flex-row items-center">
+                <p class="text-sm text-gray-500 text-center ">
+                    &copy; 2025 LexEtAl. All Rights Reserved.
+                </p>
+                <!-- <div class="flex space-x-5 mt-4 sm:mt-0 text-sm text-gray-500">
+                    <a href="#" class="hover:text-yellow-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-yellow-400 transition-colors">Terms of Service</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Smooth scroll to sections
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Content filtering functionality
+        function filterContent(filter) {
+            const contentItems = document.querySelectorAll('.content-item');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-filter') === filter) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter content
+            contentItems.forEach(item => {
+                if (filter === 'all') {
+                    item.classList.remove('hidden');
+                } else if (filter === 'blogs' && item.classList.contains('blog-item')) {
+                    item.classList.remove('hidden');
+                } else if (filter === 'videos' && item.classList.contains('video-item')) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const contentItems = document.querySelectorAll('.content-item');
+            
+            contentItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+
+        // Video player functionality
+        function loadVideo(videoId, title) {
+            const iframe = document.getElementById('featured-video');
+            const videoTitle = document.querySelector('#videos .max-w-4xl h3');
+            
+            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+            videoTitle.textContent = title;
+            
+            // Scroll to featured video
+            document.getElementById('videos').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.content-item, .card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('#blog-count, #video-count');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const increment = target / 50;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + '+';
+                    }
+                }, 30);
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in class to content items
+            const contentItems = document.querySelectorAll('.content-item, .card');
+            contentItems.forEach(item => {
+                item.classList.add('fade-in');
+            });
+            
+            // Initial scroll animation check
+            handleScrollAnimations();
+            
+            // Animate counters after a short delay
+            setTimeout(animateCounters, 500);
+            
+            // Set up scroll event listener
+            window.addEventListener('scroll', handleScrollAnimations);
+        });
+
+        // Newsletter subscription (placeholder functionality)
+        function subscribeNewsletter() {
+            const emailInput = document.querySelector('input[type="email"]');
+            const email = emailInput.value;
+            
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! You will receive updates on our latest resources.');
+                emailInput.value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        // Add newsletter subscription functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const subscribeButton = document.querySelector('section:last-of-type button');
+            if (subscribeButton) {
+                subscribeButton.addEventListener('click', subscribeNewsletter);
+            }
+        });
+
+        // Enhanced search with category filtering
+        function enhancedSearch() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            const contentItems = document.querySelectorAll('.content-item');
+            
+            contentItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('p').textContent.toLowerCase();
+                const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+                
+                let matchesFilter = true;
+                if (activeFilter !== 'all') {
+                    matchesFilter = (activeFilter === 'blogs' && item.classList.contains('blog-item')) ||
+                                   (activeFilter === 'videos' && item.classList.contains('video-item'));
+                }
+                
+                if (matchesSearch && matchesFilter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Update search input to use enhanced search
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            searchInput.removeEventListener('input', searchInput.oninput);
+            searchInput.addEventListener('input', enhancedSearch);
+        });
+    </script>
+</body>
+
+</html>
