@@ -914,6 +914,7 @@
 
 
     <!-- JavaScript -->
+    <script src="js/main.js"></script>
     <script>
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -925,6 +926,20 @@
             mobileMenu.classList.toggle('hidden');
             menuIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
+        });
+
+        // Set active navigation link for current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = 'services.html';
+            const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage) {
+                    // Add active styles
+                    link.style.backgroundColor = '#ffda57';
+                    link.style.color = '#1a1a1a';
+                }
+            });
         });
 
         // Scroll Reveal Animation

@@ -92,9 +92,14 @@ function scrollToServices() {
 
 // Set active navigation link
 function setActiveNavLink(currentPage) {
-    const navLinks = document.querySelectorAll('nav a[href*=".html"]');
+    // Select only navigation menu links, not the logo
+    const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
+        // Reset all links to default state first
+        link.style.backgroundColor = '';
+        link.style.color = '';
+        
         if (href === currentPage) {
             // Add active styles
             link.style.backgroundColor = '#ffda57';
@@ -105,11 +110,23 @@ function setActiveNavLink(currentPage) {
 
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu - ensure it runs regardless of component loading
     initMobileMenu();
+    
     initFormSubmission();
     initTestimonialCarousel();
     
-    // Set active nav link based on current page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    setActiveNavLink(currentPage);
+    // Set active nav link based on current page (only if nav exists)
+    if (document.querySelector('nav a[href*=".html"]')) {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        setActiveNavLink(currentPage);
+    }
+});
+
+// Also initialize mobile menu after components are loaded (for safety)
+window.addEventListener('load', function() {
+    // Re-initialize mobile menu after everything is loaded
+    setTimeout(() => {
+        initMobileMenu();
+    }, 100);
 });

@@ -39,7 +39,79 @@
 
 <body class="min-h-screen flex flex-col">
     <!-- Navigation Component -->
-    <div id="navigation-container"></div>
+    <nav class="shadow-lg sticky top-0 z-50 border-b-2" style="background-color: #1a1a1a; border-color: #ffda57;">
+        <div class="container mx-auto px-2 lg:px-6">
+            <div class="flex justify-between items-center h-22">
+                <!-- Logo -->
+                <div class="flex h-20 items-center">
+                    <a href="index.html"
+                        class="flex items-center gap-3 group transition-transform duration-300 ease-in-out hover:scale-105">
+                        <img src="images/logo.png" alt="Lexetal - Legal & Tax Solutions"
+                            class="h-14 w-auto drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
+                        <!-- <span class="text-xl font-bold text-white tracking-wide group-hover:text-[#ffda57] transition-colors duration-300">
+                            Lexetal
+                        </span> -->
+                    </a>
+                </div>
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Home</a>
+                    <a href="about.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">About</a>
+                    <a href="services.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Services</a>
+                    <a href="resources.html"
+                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Resources</a>
+                    <div class="ml-4 pl-4 border-l border-gray-600">
+                        <button style="background-color: #ffda57;"
+                            class="px-6 py-2 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:brightness-110">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button"
+                        class="text-white focus:outline-none p-2 rounded-lg transition-colors duration-300 hover:bg-gray-800">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-700">
+                <div class="flex flex-col space-y-2 py-4">
+                    <a href="index.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Home</a>
+                    <a href="about.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">About</a>
+                    <a href="services.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Services</a>
+                    <a href="resources.html"
+                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-yellow-400">Resources</a>
+                    <div class="px-4 pt-4 border-t border-gray-700 mt-2">
+                        <button style="background-color: #ffda57;"
+                            class="w-full px-6 py-3 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -373,7 +445,7 @@
         </section>
 
 
-        
+
     </main>
     <footer class="bg-black text-gray-400">
         <div class="container mx-auto px-4 lg:px-8 pt-20 pb-12">
@@ -388,15 +460,13 @@
                         and commitment.
                     </p>
                     <div class="flex space-x-5 mt-6">
-                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors"
-                            aria-label="LinkedIn">
+                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors" aria-label="LinkedIn">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors"
-                            aria-label="Twitter">
+                        <a href="#" class="text-gray-500 hover:text-yellow-400 transition-colors" aria-label="Twitter">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
@@ -438,8 +508,7 @@
                             <div
                                 class="bg-yellow-400 p-2 rounded-full mr-4 flex-shrink-0 group-hover:bg-yellow-300 transition-colors">
                                 <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                 </svg>
                             </div>
@@ -484,9 +553,6 @@
         </div>
     </footer>
 
-    <!-- Footer Component -->
-    <!-- <div id="footer-container"></div> -->
-
     <!-- Scripts -->
     <script src="js/component-loader.js"></script>
     <script src="js/main.js"></script>
@@ -496,10 +562,44 @@
         // Load all components when DOM is ready
         document.addEventListener('DOMContentLoaded', async function () {
             await ComponentLoader.loadComponents([
-                { path: 'components/navigation.html', target: '#navigation-container' },
                 { path: 'components/hero.html', target: '#hero-container' },
-                // { path: 'components/footer.html', target: '#footer-container' }
             ]);
+            
+            // Ensure mobile menu is working after components load
+            setTimeout(() => {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = document.getElementById('menu-icon');
+                const closeIcon = document.getElementById('close-icon');
+
+                if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                    // Remove any existing event listeners
+                    mobileMenuButton.replaceWith(mobileMenuButton.cloneNode(true));
+                    const newButton = document.getElementById('mobile-menu-button');
+                    
+                    newButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        menuIcon.classList.toggle('hidden');
+                        closeIcon.classList.toggle('hidden');
+                    });
+                }
+                
+                // Explicitly set active nav link for homepage
+                const currentPage = 'index.html';
+                const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    // Reset all links to default state first
+                    link.style.backgroundColor = '';
+                    link.style.color = '';
+                    
+                    if (href === currentPage) {
+                        // Add active styles
+                        link.style.backgroundColor = '#ffda57';
+                        link.style.color = '#1a1a1a';
+                    }
+                });
+            }, 100);
         });
     </script>
 </body>

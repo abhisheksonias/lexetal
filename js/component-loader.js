@@ -28,10 +28,9 @@ class ComponentLoader {
 }
 
 // Usage example:
-// ComponentLoader.loadComponent('components/navigation.html', '#navigation-container');
+// ComponentLoader.loadComponent('components/hero.html', '#hero-container');
 // 
 // Or load multiple components:
 // ComponentLoader.loadComponents([
-//     { path: 'components/navigation.html', target: '#navigation-container' },
-//     { path: 'components/footer.html', target: '#footer-container' }
+//     { path: 'components/hero.html', target: '#hero-container' }
 // ]);
