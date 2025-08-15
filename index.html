@@ -280,10 +280,12 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900">John Doe</h3>
-                            <p class="text-yellow-600 font-semibold mt-1">Managing Partner</p>
-                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">With 20+ years in corporate law, John
-                                leads our team with unparalleled expertise and strategic vision.</p>
+                            <h3 class="text-xl font-bold text-gray-900">Deepak Kumar Jain</h3>
+                            <p class="text-yellow-600 font-semibold mt-1">Chartered Accountant & Tax Advisory Expert</p>
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Deepak is a founding partner and a
+                                chartered Accountant, Company
+                                Secretary, and Law Graduate with 24+ years of post-qualification
+                                experience, specializing in Indirect Taxes.</p>
                         </div>
                     </div>
 
@@ -291,8 +293,8 @@
                         class="group relative bg-gray-50 rounded-xl border border-gray-200 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <div class="relative overflow-hidden">
                             <img class="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
-                                alt="Jane Smith, Tax Director">
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop"
+                                alt="John Doe, Managing Partner">
                             <div
                                 class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/70 to-transparent transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                                 <div class="flex justify-center space-x-5">
@@ -310,10 +312,13 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900">Jane Smith</h3>
-                            <p class="text-yellow-600 font-semibold mt-1">Tax Director</p>
-                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Jane specializes in international
-                                taxation and complex corporate structuring with 15 years of experience.</p>
+                            <h3 class="text-xl font-bold text-gray-900">Vivek Sarin</h3>
+                            <p class="text-yellow-600 font-semibold mt-1">Litigation Specialist & GST & Indirect Tax
+                                Advisor</p>
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Vivek Sarin is a Founding Partner at
+                                LexEtAl Global and is passionate
+                                about building collaborative platforms that advance the practice of
+                                tax law.</p>
                         </div>
                     </div>
 
@@ -321,8 +326,8 @@
                         class="group relative bg-gray-50 rounded-xl border border-gray-200 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <div class="relative overflow-hidden">
                             <img class="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                src="https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=2574&auto=format&fit=crop"
-                                alt="Michael Johnson, Legal Counsel">
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop"
+                                alt="John Doe, Managing Partner">
                             <div
                                 class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/70 to-transparent transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                                 <div class="flex justify-center space-x-5">
@@ -340,10 +345,13 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900">Michael Johnson</h3>
-                            <p class="text-yellow-600 font-semibold mt-1">Head of Litigation</p>
-                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Michael is a seasoned litigator
-                                specializing in high-stakes commercial and civil dispute resolution.</p>
+                            <h3 class="text-xl font-bold text-gray-900">Shreyas Shrivastava</h3>
+                            <p class="text-yellow-600 font-semibold mt-1">Commercial Tax Litigation Specialist</p>
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Shreyas Shrivastava is a Founding
+                                Partner at LexEtAl Global and is a
+                                seasoned Counsel at the Bombay High Court, renowned for his
+                                meticulous approach to litigation and unwavering commitment to the
+                                legal profession.</p>
                         </div>
                     </div>
 
@@ -564,7 +572,7 @@
             await ComponentLoader.loadComponents([
                 { path: 'components/hero.html', target: '#hero-container' },
             ]);
-            
+
             // Ensure mobile menu is working after components load
             setTimeout(() => {
                 const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -576,14 +584,14 @@
                     // Remove any existing event listeners
                     mobileMenuButton.replaceWith(mobileMenuButton.cloneNode(true));
                     const newButton = document.getElementById('mobile-menu-button');
-                    
+
                     newButton.addEventListener('click', () => {
                         mobileMenu.classList.toggle('hidden');
                         menuIcon.classList.toggle('hidden');
                         closeIcon.classList.toggle('hidden');
                     });
                 }
-                
+
                 // Explicitly set active nav link for homepage
                 const currentPage = 'index.html';
                 const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
@@ -592,7 +600,7 @@
                     // Reset all links to default state first
                     link.style.backgroundColor = '';
                     link.style.color = '';
-                    
+
                     if (href === currentPage) {
                         // Add active styles
                         link.style.backgroundColor = '#ffda57';
