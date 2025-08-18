@@ -39,16 +39,16 @@
 
 <body class="min-h-screen flex flex-col">
     <!-- Navigation Component -->
-    <nav class="shadow-lg sticky top-0 z-50 border-b-2" style="background-color: #1a1a1a; border-color: #ffda57;">
+    <nav class="shadow-lg sticky top-0 z-50 border-b-2 backdrop-blur-sm" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-color: #ffda57;">
         <div class="container mx-auto px-2 lg:px-6">
             <div class="flex justify-between items-center h-22">
                 <!-- Logo -->
-                <div class="flex h-20 items-center">
+                <div class="flex h-20 items-center bg">
                     <a href="index.html"
-                        class="flex items-center gap-3 group transition-transform duration-300 ease-in-out hover:scale-105">
+                        class="flex items-center gap-3 bg-black rounded-xl group transition-transform duration-300 ease-in-out hover:scale-105">
                         <img src="images/logo.png" alt="Lexetal - Legal & Tax Solutions"
                             class="h-14 w-auto drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
-                        <!-- <span class="text-xl font-bold text-white tracking-wide group-hover:text-[#ffda57] transition-colors duration-300">
+                        <!-- <span class="text-xl font-bold text-gray-900 tracking-wide group-hover:text-[#ffda57] transition-colors duration-300">
                             Lexetal
                         </span> -->
                     </a>
@@ -58,16 +58,16 @@
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-1">
                     <a href="index.html"
-                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Home</a>
+                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Home</a>
                     <a href="about.html"
-                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">About</a>
+                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">About</a>
                     <a href="services.html"
-                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Services</a>
+                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Services</a>
                     <a href="resources.html"
-                        class="px-4 py-2 text-white font-medium rounded-lg transition-all duration-300 hover:bg-white hover:text-gray-900 transform hover:scale-105">Resources</a>
-                    <div class="ml-4 pl-4 border-l border-gray-600">
+                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Resources</a>
+                    <div class="ml-4 pl-4 border-l border-gray-400">
                         <button style="background-color: #ffda57;"
-                            class="px-6 py-2 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:brightness-110">
+                            class="px-6 py-2 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:brightness-110 border border-yellow-300">
                             Contact Us
                         </button>
                     </div>
@@ -76,7 +76,7 @@
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
                     <button id="mobile-menu-button"
-                        class="text-white focus:outline-none p-2 rounded-lg transition-colors duration-300 hover:bg-gray-800">
+                        class="text-gray-800 focus:outline-none p-2 rounded-lg transition-colors duration-300 hover:bg-yellow-100 border border-transparent hover:border-yellow-200">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -91,19 +91,19 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-700">
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-300">
                 <div class="flex flex-col space-y-2 py-4">
                     <a href="index.html"
-                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-[#ffda57]">Home</a>
+                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Home</a>
                     <a href="about.html"
-                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-[#ffda57]">About</a>
+                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">About</a>
                     <a href="services.html"
-                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-[#ffda57]">Services</a>
+                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Services</a>
                     <a href="resources.html"
-                        class="px-4 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 border-l-4 border-transparent hover:border-[#ffda57]">Resources</a>
-                    <div class="px-4 pt-4 border-t border-gray-700 mt-2">
+                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Resources</a>
+                    <div class="px-4 pt-4 border-t border-gray-300 mt-2">
                         <button style="background-color: #ffda57;"
-                            class="w-full px-6 py-3 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+                            class="w-full px-6 py-3 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 border border-yellow-300">
                             Contact Us
                         </button>
                     </div>
