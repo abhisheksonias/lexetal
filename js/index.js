@@ -79,3 +79,80 @@ function initMobileMenuFallback() {
 // Try to initialize immediately and also after a delay
 initMobileMenuFallback();
 setTimeout(initMobileMenuFallback, 500);
+
+// Simple Scroll Animation for Core Pillars Circles
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const container = entry.target;
+            const leftCircle = container.querySelector('.scroll-circle-left');
+            const centerCircle = container.querySelector('.scroll-circle-center');
+            const rightCircle = container.querySelector('.scroll-circle-right');
+            const textContent = container.querySelector('.scroll-text');
+            
+            if (entry.isIntersecting) {
+                // ENTRY ANIMATION - Slide in from left and right
+                if (leftCircle) {
+                    leftCircle.style.opacity = '1';
+                    leftCircle.style.transform = 'translateX(0)';
+                }
+                
+                if (centerCircle) {
+                    centerCircle.style.opacity = '1';
+                    centerCircle.style.transform = 'scale(1)';
+                }
+                
+                if (rightCircle) {
+                    rightCircle.style.opacity = '1';
+                    rightCircle.style.transform = 'translateX(0)';
+                }
+                
+                if (textContent) {
+                    textContent.style.opacity = '1';
+                    textContent.style.transform = 'translateY(0)';
+                }
+            } else {
+                // EXIT ANIMATION - Slide out to left and right
+                if (leftCircle) {
+                    leftCircle.style.opacity = '0';
+                    leftCircle.style.transform = 'translateX(-150px)';
+                }
+                
+                if (centerCircle) {
+                    centerCircle.style.opacity = '0.3';
+                    centerCircle.style.transform = 'scale(0.9)';
+                }
+                
+                if (rightCircle) {
+                    rightCircle.style.opacity = '0';
+                    rightCircle.style.transform = 'translateX(150px)';
+                }
+                
+                if (textContent) {
+                    textContent.style.opacity = '0';
+                    textContent.style.transform = 'translateY(30px)';
+                }
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    // Observe the core pillars container
+    const corePillarsContainer = document.getElementById('core-pillars-circles');
+    if (corePillarsContainer) {
+        observer.observe(corePillarsContainer);
+    }
+}
+
+// Initialize scroll animations when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Small delay to ensure all elements are rendered
+    setTimeout(initScrollAnimations, 100);
+});
+
+// Also initialize when page is fully loaded as a fallback
+window.addEventListener('load', function() {
+    setTimeout(initScrollAnimations, 200);
+});
