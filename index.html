@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lexetal - Professional Law and Tax Consultancy Services">
     <meta name="keywords" content="law, tax, consultancy, legal services, tax advisory, Lexetal">
     <meta name="author" content="Lexetal">
 
@@ -38,75 +37,92 @@
 </head>
 
 <body class="min-h-screen flex flex-col">
-    <!-- Navigation Component -->
-    <nav class="shadow-lg sticky top-0 z-50 border-b-2 backdrop-blur-sm" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-color: #ffda57;">
-        <div class="container mx-auto px-2 lg:px-6">
-            <div class="flex justify-between items-center h-22">
-                <!-- Logo -->
-                <div class="flex h-20 items-center bg">
+    <nav class="sticky top-0 z-50 lg:px-20 bg-[#333740]/80 backdrop-blur-lg">
+        <div class="mx-auto max-w-screen-2xl px-6 sm:px-8 lg:px-12">
+            <div class="flex h-20 items-center justify-between">
+
+                <!-- Logo Section -->
+                <div class="flex h-20  items-center">
                     <a href="index.html"
-                        class="flex items-center gap-3 bg-black rounded-xl group transition-transform duration-300 ease-in-out hover:scale-105">
+                        class="flex items-center gap-3 rounded-xl group transition-transform duration-300 ease-in-out hover:scale-105">
                         <img src="images/logo.png" alt="Lexetal - Legal & Tax Solutions"
                             class="h-14 w-auto drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
-                        <!-- <span class="text-xl font-bold text-gray-900 tracking-wide group-hover:text-[#ffda57] transition-colors duration-300">
-                            Lexetal
-                        </span> -->
                     </a>
                 </div>
 
+                <!-- Desktop Navigation Links (Centered) -->
+                <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-center lg:gap-x-2">
+                    <a href="#"
+                        class="group relative px-4 py-2 font-medium text-white transition-colors duration-300 hover:text-[#ffd54f]">
+                        Home
+                        <span
+                            class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-[#ffd54f] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#"
+                        class="group relative px-4 py-2 font-medium text-white transition-colors duration-300 hover:text-[#ffd54f]">
+                        About
+                        <span
+                            class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-[#ffd54f] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#"
+                        class="group relative px-4 py-2 font-medium text-white transition-colors duration-300 hover:text-[#ffd54f]">
+                        Services
+                        <span
+                            class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-[#ffd54f] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#"
+                        class="group relative px-4 py-2 font-medium text-white transition-colors duration-300 hover:text-[#ffd54f]">
+                        Resources
+                        <span
+                            class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 bg-[#ffd54f] transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
 
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-1">
-                    <a href="index.html"
-                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Home</a>
-                    <a href="about.html"
-                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">About</a>
-                    <a href="services.html"
-                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Services</a>
-                    <a href="resources.html"
-                        class="px-4 py-2 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:text-gray-900 transform hover:scale-105 border border-transparent hover:border-yellow-200">Resources</a>
-                    <div class="ml-4 pl-4 border-l border-gray-400">
-                        <button style="background-color: #ffda57;"
-                            class="px-6 py-2 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 hover:brightness-110 border border-yellow-300">
+                <!-- Right Section: Contact Button & Mobile Menu Toggle -->
+                <div class="flex items-center gap-x-4">
+                    <div class="hidden lg:block">
+                        <button
+                            class="btn-shine relative overflow-hidden rounded-lg bg-[#ffd54f] px-6 py-2.5 text-sm font-semibold text-[#333740] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-opacity-90 hover:shadow-lg hover:shadow-[#ffd54f]/20">
                             Contact Us
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden">
+                        <button id="mobile-menu-button"
+                            class="rounded-lg p-2 text-white transition-colors duration-300 hover:bg-white/10 focus:outline-none">
+                            <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-12 6h12"></path>
+                            </svg>
+                            <svg id="close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
                         </button>
                     </div>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden">
-                    <button id="mobile-menu-button"
-                        class="text-gray-800 focus:outline-none p-2 rounded-lg transition-colors duration-300 hover:bg-yellow-100 border border-transparent hover:border-yellow-200">
-                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
+        </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-300">
-                <div class="flex flex-col space-y-2 py-4">
-                    <a href="index.html"
-                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Home</a>
-                    <a href="about.html"
-                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">About</a>
-                    <a href="services.html"
-                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Services</a>
-                    <a href="resources.html"
-                        class="px-4 py-3 text-gray-800 font-medium rounded-lg transition-all duration-300 hover:bg-yellow-100 border-l-4 border-transparent hover:border-[#ffda57]">Resources</a>
-                    <div class="px-4 pt-4 border-t border-gray-300 mt-2">
-                        <button style="background-color: #ffda57;"
-                            class="w-full px-6 py-3 text-gray-900 font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 border border-yellow-300">
-                            Contact Us
-                        </button>
-                    </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden">
+            <div class="space-y-1 px-4 pb-4 pt-2">
+                <a href="#"
+                    class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">Home</a>
+                <a href="#"
+                    class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">About</a>
+                <a href="#"
+                    class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">Services</a>
+                <a href="#"
+                    class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">Resources</a>
+                <div class="border-t border-white/10 pt-4 mt-2">
+                    <button
+                        class="btn-shine relative overflow-hidden w-full rounded-lg bg-[#ffd54f] px-5 py-2.5 text-base font-semibold text-[#333740] shadow-sm transition-all duration-300 hover:bg-opacity-90">
+                        Contact Us
+                    </button>
                 </div>
             </div>
         </div>
@@ -115,8 +131,47 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-        <!-- Hero Component -->
-        <div id="hero-container"></div>
+        <section
+            class="relative flex h-[calc(100vh-80px)] min-h-[600px] items-center overflow-hidden bg-white bg-[url('images/herobg2.png')] bg-cover bg-center bg-no-repeat">
+            <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+                <div
+                    class="inline-flex items-center px-4 py-1.5 rounded-full mb-6 border border-lexetal-accent/50 bg-yellow-100">
+                    <span class="text-sm font-medium text-yellow-800">Trusted Legal & Tax Experts</span>
+                </div>
+
+                <h1 class="text-4xl font-extrabold tracking-tight text-[#333740] sm:text-5xl md:text-6xl lg:text-7xl">
+                    Expert Counsel for <span class="text-[#ffd54f]">Legal Success</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-white md:text-xl">
+                    Rooted in knowledge, integrity, and commitment to provide premier legal and tax advisory services.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#"
+                        class="btn-shine relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#ffd54f] px-8 py-3.5 text-base font-semibold text-[#333740] shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[#ffd54f]/20">
+                        Get Free Consultation
+                    </a>
+                    <a href="#"
+                        class="inline-block w-full sm:w-auto rounded-lg border-2 border-white text-white px-8 py-3.5 text-base font-semibold text-[#333740] transition-all duration-300 hover:scale-105 hover:bg-[#333740] hover:text-white">
+                        Explore Services
+                    </a>
+                </div>
+
+                <!-- Engaging Caption -->
+                <div class="mt-12 max-w-2xl mx-auto">
+                    <p class="text-sm text-white/80 italic leading-relaxed">
+                        "Join thousands of businesses who trust us with their most critical legal and tax matters.
+                        Your success is our commitment – let's build it together."
+                    </p>
+                    <div class="mt-4 flex items-center justify-center gap-2 text-xs text-white/60">
+                        <span>✓ 24+ Years Experience</span>
+                        <span class="w-1 h-1 bg-white/40 rounded-full"></span>
+                        <span>✓ 1000+ Clients Served</span>
+                        <span class="w-1 h-1 bg-white/40 rounded-full"></span>
+                        <span>✓ Expert Legal Team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- About Snippet Section -->
         <section class="bg-white py-20 lg:py-20">
@@ -124,27 +179,26 @@
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     <div class="text-center lg:text-left">
-                        <p class="text-sm font-semibold uppercase tracking-widest mb-4" style="color: #ffda57;">
+                        <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-lexetal-accent">
                             Who We Are
                         </p>
                         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
                             India’s Premier Network of Tax & Legal Professionals
                         </h2>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                            LexEtAl is driven by three core pillars: <strong>Knowledge, Integrity, and
-                                Commitment</strong>. We unite the nation's leading lawyers, CAs, CSs, and industry
-                            experts to foster collaboration and thought leadership in an ever-evolving regulatory
-                            landscape.
-                        </p>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                            By transforming individual insight into collective intelligence, we empower both seasoned
-                            experts and emerging talent to achieve shared growth.
-                        </p>
+                        <div class="space-y-6 pb-4 text-lg text-gray-700 leading-relaxed">
+                            <p>Lex Et Al Global is India's premier organization of tax professionals comprising
+                                advocates, chartered accountants, company secretaries, regulators and other tax
+                                specialists from across the country and beyond.</p>
+                            <p>Built to address the challenges of a complex and ever-evolving regulatory
+                                environment, LexEtAl provides a space where professionals assist in proper advice on
+                                application of law, shape the landscape for better future, and transform confined
+                                expertise into collective intelligence.</p>
+                            <p>At LexEtAl, we're not just building connections—we're building a trusted community
+                                where ideas flourish, partnerships thrive and the practice of tax law is
+                                progressively elevated.</p>
+                        </div>
                         <a href="about.html"
-                            class="inline-block px-8 py-3.5 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-gray-900 focus:outline-none focus:ring-4"
-                            style="background-color: #ffda57;"
-                            onmouseover="this.style.backgroundColor='#e6c44e'"
-                            onmouseout="this.style.backgroundColor='#ffda57'">
+                            class="inline-block px-8 py-3 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-gray-900 focus:outline-none focus:ring-4 bg-lexetal-accent hover:bg-yellow-400">
                             Learn More About Us
                         </a>
                     </div>
@@ -169,7 +223,7 @@
             <div class="container mx-auto px-4 lg:px-8">
 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <p class="text-sm font-semibold uppercase tracking-widest mb-4" style="color: #ffda57;">
+                    <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-lexetal-accent">
                         Our Expertise
                     </p>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -185,8 +239,8 @@
 
                     <div
                         class="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group">
-                        <div class="inline-block p-4 rounded-lg mb-6" style="background-color: rgba(255, 218, 87, 0.1);">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" style="color: #ffda57;" fill="none"
+                        <div class="inline-block p-4 rounded-lg mb-6 bg-lexetal-accent/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-lexetal-accent" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -203,8 +257,8 @@
 
                     <div
                         class="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group">
-                        <div class="inline-block p-4 rounded-lg mb-6" style="background-color: rgba(255, 218, 87, 0.1);">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" style="color: #ffda57;" fill="none"
+                        <div class="inline-block p-4 rounded-lg mb-6 bg-lexetal-accent/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-lexetal-accent" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 1.75a2.25 2.25 0 0 1 2.25 2.25v.75H9.75v-.75A2.25 2.25 0 0 1 12 1.75Zm4.5 4.5v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm-9 0v.75a.75.75 0 0 1-1.5 0v-.75a.75.75 0 0 1 1.5 0Zm9 1.5H7.5v12.75a.75.75 0 0 0 .75.75h7.5a.75.75 0 0 0 .75-.75V8.5a.75.75 0 0 0-.75-.75h-3Zm-1.5 3a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5h1.5Zm0 3a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5h1.5Zm0 3a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5h1.5Z" />
@@ -221,8 +275,8 @@
 
                     <div
                         class="bg-white p-8 rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group">
-                        <div class="inline-block p-4 rounded-lg mb-6" style="background-color: rgba(255, 218, 87, 0.1);">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" style="color: #ffda57;" fill="none"
+                        <div class="inline-block p-4 rounded-lg mb-6 bg-lexetal-accent/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-lexetal-accent" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M8.25 7.5V6a2.25 2.25 0 0 1 2.25-2.25h3a2.25 2.25 0 0 1 2.25 2.25v1.5m-9.75 3h11.25m-11.25 3h11.25m-11.25 3h11.25m-11.25 3h11.25M3.75 7.5h16.5v12A2.25 2.25 0 0 1 18 21.75H6a2.25 2.25 0 0 1-2.25-2.25v-12Z" />
@@ -246,7 +300,7 @@
             <div class="container mx-auto px-4 lg:px-8">
 
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <p class="text-sm font-semibold uppercase tracking-widest mb-4" style="color: #ffda57;">
+                    <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-lexetal-accent">
                         Meet The Leaders
                     </p>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -284,7 +338,8 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900">Deepak Kumar Jain</h3>
-                            <p class="font-semibold mt-1" style="color: #ffda57;">Chartered Accountant & Tax Advisory Expert</p>
+                            <p class="font-semibold mt-1 text-lexetal-accent">Chartered Accountant & Tax Advisory
+                                Expert</p>
                             <p class="text-gray-600 mt-4 text-sm leading-relaxed">Deepak is a founding partner and a
                                 chartered Accountant, Company
                                 Secretary, and Law Graduate with 24+ years of post-qualification
@@ -316,7 +371,8 @@
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-gray-900">Vivek Sarin</h3>
-                            <p class="font-semibold mt-1" style="color: #ffda57;">Litigation Specialist & GST & Indirect Tax
+                            <p class="font-semibold mt-1 text-lexetal-accent">Litigation Specialist & GST & Indirect
+                                Tax
                                 Advisor</p>
                             <p class="text-gray-600 mt-4 text-sm leading-relaxed">Vivek Sarin is a Founding Partner at
                                 LexEtAl Global and is passionate
@@ -500,10 +556,8 @@
                     <h4 class="font-semibold text-white tracking-wider uppercase mb-6">Contact Us</h4>
                     <ul class="mt-4 space-y-6">
                         <li class="flex items-start group">
-                            <div class="p-2 rounded-full mr-4 flex-shrink-0 transition-colors"
-                                 style="background-color: #ffda57;"
-                                 onmouseover="this.style.backgroundColor='#e6c44e'"
-                                 onmouseout="this.style.backgroundColor='#ffda57'">
+                            <div
+                                class="p-2 rounded-full mr-4 flex-shrink-0 transition-colors bg-lexetal-accent hover:bg-yellow-400">
                                 <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
                                     <path
                                         d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -569,52 +623,7 @@
     <!-- Scripts -->
     <script src="js/component-loader.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- Load Components -->
-    <script>
-        // Load all components when DOM is ready
-        document.addEventListener('DOMContentLoaded', async function () {
-            await ComponentLoader.loadComponents([
-                { path: 'components/hero.html', target: '#hero-container' },
-            ]);
-
-            // Ensure mobile menu is working after components load
-            setTimeout(() => {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                const menuIcon = document.getElementById('menu-icon');
-                const closeIcon = document.getElementById('close-icon');
-
-                if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
-                    // Remove any existing event listeners
-                    mobileMenuButton.replaceWith(mobileMenuButton.cloneNode(true));
-                    const newButton = document.getElementById('mobile-menu-button');
-
-                    newButton.addEventListener('click', () => {
-                        mobileMenu.classList.toggle('hidden');
-                        menuIcon.classList.toggle('hidden');
-                        closeIcon.classList.toggle('hidden');
-                    });
-                }
-
-                // Explicitly set active nav link for homepage
-                const currentPage = 'index.html';
-                const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
-                navLinks.forEach(link => {
-                    const href = link.getAttribute('href');
-                    // Reset all links to default state first
-                    link.style.backgroundColor = '';
-                    link.style.color = '';
-
-                    if (href === currentPage) {
-                        // Add active styles
-                        link.style.backgroundColor = '#ffda57';
-                        link.style.color = '#1a1a1a';
-                    }
-                });
-            }, 100);
-        });
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

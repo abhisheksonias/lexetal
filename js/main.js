@@ -102,7 +102,7 @@ function setActiveNavLink(currentPage) {
         
         if (href === currentPage) {
             // Add active styles
-            link.style.backgroundColor = '#ffda57';
+            link.style.backgroundColor = '#ffd54f';
             link.style.color = '#1a1a1a';
         }
     });

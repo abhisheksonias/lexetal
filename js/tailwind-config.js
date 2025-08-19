@@ -5,7 +5,7 @@ tailwind.config = {
             colors: {
                 'lexetal-light': '#eaeaea',
                 'lexetal-dark': '#1a1a1a',
-                'lexetal-accent': '#ffda57',
+                'lexetal-accent': '#ffd54f',
             }
         }
     }
