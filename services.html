@@ -49,161 +49,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .transition-custom {
-                transition: all 0.3s ease;
-            }
-        }
-        
-        /* Hero gradient background */
-        .hero-gradient {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-        }
-        
-        /* Text gradient */
-        .text-gradient {
-            background: linear-gradient(135deg, #ffd54f 0%, #ffd54f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Glass effect */
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Card hover effects */
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        /* Service card special effects */
-        .service-card {
-            background: white;
-            border-radius: 1.5rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 218, 87, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        
-        .service-card:hover::before {
-            left: 100%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        /* Floating animation */
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        /* Pulse animation */
-        .pulse-animation {
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.8; }
-        }
-        
-        /* Why choose us card effects */
-        .why-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s ease;
-        }
-        
-        .why-card:hover {
-            background: linear-gradient(135deg, #ffd54f 0%, #ffd54f 100%);
-            color: #1a1a1a;
-            transform: translateY(-8px);
-        }
-        
-        /* Icon animations */
-        .icon-bounce {
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover .icon-bounce {
-            transform: scale(1.2) rotate(10deg);
-        }
-        
-        /* Scroll reveal animation */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        body {
-            background-color: #eaeaea;
-            color: #1a1a1a;
-        }
-        .btn-primary {
-            background-color: #ffd54f;
-            color: #1a1a1a;
-            font-weight: bold;
-            padding: 0.5rem 1.5rem;
-            border-radius: 0.375rem;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            opacity: 0.8;
-        }
-        .nav-link {
-            color: #1a1a1a;
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #ffd54f;
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -302,147 +148,866 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero-gradient text-white min-h-screen flex items-center relative overflow-hidden">
-            <!-- Background Elements -->
-            <div class="absolute inset-0 opacity-10">
-                <div
-                    class="floating-animation absolute top-20 right-5 md:right-20 w-16 md:w-32 h-16 md:h-32 bg-[#ffd54f]/20 rounded-full blur-xl">
+        <section
+            class="relative flex h-[calc(100vh-80px)] min-h-[600px] items-center overflow-hidden bg-white bg-[url('images/herobg2.png')] bg-cover bg-center bg-no-repeat">
+            <div class="relative z-10 mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-8 items-center">
+
+                <!-- Services Content (left side) -->
+                <div class="text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6 sm:mb-8">
+                        <svg class="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-[#ffd54f]" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-xs sm:text-sm font-medium text-[#ffd54f]">Professional Excellence Since
+                            2010</span>
+                    </div>
+
+                    <h1
+                        class="text-4xl font-extrabold tracking-tight text-[#EAEAEA] font-spartan sm:text-5xl md:text-6xl lg:text-7xl">
+                        Our <span class="text-[#FFD54F]">Services</span>.
+                    </h1>
+                    <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-[#EAEAEA]/80 md:text-xl font-normal font-nova">
+                        Comprehensive legal and tax solutions tailored to meet your unique business needs.
+                        From compliance to strategic planning, we've got you covered.
+                    </p>
+
+                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#services"
+                            class="btn-shine relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan text-[#1A1A1A] shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[#FFD54F]/20">
+                            Explore Services
+                        </a>
+                        <a href="#consultation"
+                            class="inline-block w-full sm:w-auto rounded-lg border-2 border-[#FFD54F] text-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan transition-all duration-300 hover:scale-105 hover:bg-[#FFD54F] hover:text-[#1A1A1A]">
+                            Get Consultation
+                        </a>
+                    </div>
+
+                    <!-- Key service statistics brand row -->
+                    <div
+                        class="mt-12 flex flex-wrap justify-center lg:justify-start gap-4 text-xs text-[#EAEAEA]/70 font-spartan">
+                        <span>✓ 24/7 Support</span>
+                        <span class="w-1 h-1 bg-[#FFD54F]/60 rounded-full"></span>
+                        <span>✓ 99% Success Rate</span>
+                        <span class="w-1 h-1 bg-[#FFD54F]/60 rounded-full"></span>
+                        <span>✓ Expert Legal Team</span>
+                    </div>
                 </div>
-                <div class="floating-animation absolute bottom-40 left-5 md:left-10 w-12 md:w-24 h-12 md:h-24 bg-white/10 rounded-full blur-lg"
-                    style="animation-delay: 2s;"></div>
-                <div class="floating-animation absolute top-1/3 left-1/4 w-8 md:w-16 h-8 md:h-16 bg-[#ffd54f]/30 rounded-full blur-md"
-                    style="animation-delay: 4s;"></div>
-                <div class="pulse-animation absolute bottom-1/3 right-1/4 w-6 md:w-12 h-6 md:h-12 bg-blue-400/20 rounded-full blur-lg"
-                    style="animation-delay: 1s;"></div>
-            </div>
 
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-12 lg:py-0">
-                    <!-- Hero Content -->
-                    <div class="scroll-reveal text-center lg:text-left">
+                <!-- Hero Visual (right side) -->
+                <div class="hidden lg:block mx-auto w-full max-w-md">
+                    <div
+                        class="bg-[#333740]/40 backdrop-blur-sm border border-[#EAEAEA]/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl transition-all duration-500">
                         <div
-                            class="inline-flex items-center px-3 sm:px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6 sm:mb-8">
-                            <svg class="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-[#ffd54f]" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span class="text-xs sm:text-sm font-medium text-[#ffd54f]">Professional Excellence Since
-                                2010</span>
+                            class="bg-gradient-to-br from-[#333740] to-[#1A1A1A] rounded-xl sm:rounded-2xl p-6 lg:p-8 text-[#EAEAEA] relative overflow-hidden border border-[#FFD54F]/20">
+                            <div class="absolute inset-0 opacity-5">
+                                <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                                    <defs>
+                                        <pattern id="serviceGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#EAEAEA"
+                                                stroke-width="0.3" />
+                                        </pattern>
+                                    </defs>
+                                    <rect width="100" height="100" fill="url(#serviceGrid)" />
+                                </svg>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4 sm:mb-6">
+                                    <div
+                                        class="w-14 h-14 bg-[#FFD54F]/20 border border-[#FFD54F]/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg class="w-8 h-8 text-[#FFD54F]" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3
+                                        class="text-lg sm:text-xl lg:text-2xl font-bold mb-2 font-spartan text-[#EAEAEA]">
+                                        Our Service
+                                        Areas</h3>
+                                    <p class="text-[#EAEAEA]/70 text-sm sm:text-base font-nova">Tax • Legal • Compliance
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                                    <div
+                                        class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
+                                        <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">Tax
+                                            Law</div>
+                                        <div class="text-[#EAEAEA]/60 text-xs font-nova">Expertise</div>
+                                    </div>
+                                    <div
+                                        class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
+                                        <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">Legal
+                                            Aid</div>
+                                        <div class="text-[#EAEAEA]/60 text-xs font-nova">Support</div>
+                                    </div>
+                                    <div
+                                        class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
+                                        <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
+                                            Compliance</div>
+                                        <div class="text-[#EAEAEA]/60 text-xs font-nova">Management</div>
+                                    </div>
+                                    <div
+                                        class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
+                                        <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
+                                            Consulting</div>
+                                        <div class="text-[#EAEAEA]/60 text-xs font-nova">Strategic</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <!-- Floating Elements matching brand colors -->
+                    <div
+                        class="absolute -top-4 -right-4 w-12 h-12 bg-[#FFD54F]/20 rounded-full blur-lg floating-animation">
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -left-4 w-8 h-8 bg-[#333740]/30 rounded-full blur-md floating-animation animation-delay-3s">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <h1
-                            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
-                            Our
-                            <span class="text-gradient block sm:inline">Services</span>
-                        </h1>
 
-                        <p
-                            class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            Comprehensive legal and tax solutions tailored to meet your unique business needs.
-                            From compliance to strategic planning, we've got you covered.
+        <!-- Services Overview Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-4xl mx-auto mb-16">
+                    <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-[#FFD54F]">
+                        Our Services
+                    </p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                        Comprehensive <span class="text-gradient">Legal & Tax</span> Services
+                    </h2>
+
+                    <p class="text-lg text-[#333740] leading-relaxed font-nova">
+                        End-to-end solutions in Direct & Indirect Taxation, delivered through India's most trusted
+                        network of legal and tax professionals. From strategic advisory to complex litigation, we
+                        support businesses at every stage of their tax journey.
+                    </p>
+                </div>
+
+                <!-- Main Service Categories Grid -->
+                <div class="grid lg:grid-cols-3 gap-8 mb-16">
+
+                    <!-- Advisory Services -->
+                    <div
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-14 h-14 bg-[#FFD54F] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-7 h-7 text-[#1A1A1A]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Advisory</h3>
+                        </div>
+                        <p class="text-[#333740] mb-6 font-nova">
+                            Strategic tax planning and expert guidance to optimize tax positions, manage risks, and
+                            ensure alignment with the latest regulatory developments.
                         </p>
+                        <ul class="text-sm text-[#333740] space-y-2 mb-6 font-nova">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#FFD54F] rounded-full mr-3"></span>
+                                Tax Planning & Structuring
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#FFD54F] rounded-full mr-3"></span>
+                                Transfer Pricing Advisory
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#FFD54F] rounded-full mr-3"></span>
+                                Regulatory Updates & Policy Analysis
+                            </li>
+                        </ul>
+                    </div>
 
-                        <!-- Service Highlights -->
-                        <div class="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto lg:mx-0">
-                            <div class="text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold text-[#ffd54f] mb-1">24/7</div>
-                                <div class="text-xs sm:text-sm text-gray-400">Support</div>
+                    <!-- Litigation Services -->
+                    <div
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-14 h-14 bg-[#3F51B5] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                </svg>
                             </div>
-                            <div class="text-center lg:text-left">
-                                <div class="text-2xl sm:text-3xl font-bold text-[#ffd54f] mb-1">99%</div>
-                                <div class="text-xs sm:text-sm text-gray-400">Success Rate</div>
+                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Litigation</h3>
+                        </div>
+                        <p class="text-[#333740] mb-6 font-nova">
+                            Strong representation and advocacy in tax disputes before all relevant authorities and
+                            judicial forums, ensuring effective resolution of complex matters.
+                        </p>
+                        <ul class="text-sm text-[#333740] space-y-2 mb-6 font-nova">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#3F51B5] rounded-full mr-3"></span>
+                                Supreme Court & High Court Litigation
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#3F51B5] rounded-full mr-3"></span>
+                                Tribunal Representation
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#3F51B5] rounded-full mr-3"></span>
+                                Constitutional Challenges
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Compliance Services -->
+                    <div
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-14 h-14 bg-[#26A69A] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Compliance</h3>
+                        </div>
+                        <p class="text-[#333740] mb-6 font-nova">
+                            Comprehensive support for all statutory tax filings, regulatory submissions, and ongoing
+                            compliance requirements in both direct and indirect taxation.
+                        </p>
+                        <ul class="text-sm text-[#333740] space-y-2 mb-6 font-nova">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#26A69A] rounded-full mr-3"></span>
+                                GST Compliance & Return Filing
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#26A69A] rounded-full mr-3"></span>
+                                Income Tax Compliance
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#26A69A] rounded-full mr-3"></span>
+                                E-invoicing & Digital Compliance
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Statistics -->
+                <div class="bg-[#1A1A1A] rounded-3xl p-8 lg:p-12">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="text-3xl lg:text-4xl font-bold text-[#FFD54F] mb-2 font-spartan">500+</div>
+                            <p class="text-[#EAEAEA] font-nova">Successful Cases</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl lg:text-4xl font-bold text-[#FFD54F] mb-2 font-spartan">115+</div>
+                            <p class="text-[#EAEAEA] font-nova">Tax Professionals</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl lg:text-4xl font-bold text-[#FFD54F] mb-2 font-spartan">3</div>
+                            <p class="text-[#EAEAEA] font-nova">Major Office Locations</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl lg:text-4xl font-bold text-[#FFD54F] mb-2 font-spartan">24+</div>
+                            <p class="text-[#EAEAEA] font-nova">Years Combined Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <!-- <div class="text-center mt-12">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F]/10 border border-[#FFD54F]/30 mb-6">
+                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">Your Trusted Legal Partner</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button
+                            class="bg-[#FFD54F] text-[#1A1A1A] font-bold px-8 py-3 rounded-xl hover:bg-[#e6c14d] transition-colors font-spartan">
+                            Schedule Consultation
+                        </button>
+                        <button
+                            class="border-2 border-[#1A1A1A] text-[#1A1A1A] font-bold px-8 py-3 rounded-xl hover:bg-[#1A1A1A] hover:text-white transition-colors font-spartan">
+                            Download Service Guide
+                        </button>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section class="py-20 bg-[#EAEAEA]">
+            <div class="container mx-auto px-4 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-[#FFD54F]">
+                        Core Practice Areas
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#1A1A1A] tracking-tight mb-6 font-spartan">
+                        Specialized Legal & Tax Services
+                    </h2>
+                    <p class="text-lg text-[#333740] leading-relaxed font-nova">
+                        Our comprehensive suite of services covers every aspect of tax law and legal practice, delivered
+                        by India's most experienced professionals across multiple jurisdictions.
+                    </p>
+                </div>
+
+                <!-- Main Services Grid -->
+                <div class="grid lg:grid-cols-2 gap-8 mb-16">
+
+                    <!-- Direct Taxation -->
+                    <div
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        <div class="flex items-start mb-6">
+                            <div
+                                class="w-16 h-16 bg-[#FFD54F] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-[#1A1A1A]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#1A1A1A] mb-3 font-spartan">Direct Taxation</h3>
+                                <p class="text-[#333740] mb-6 font-nova">
+                                    Comprehensive income tax advisory, strategic planning, and litigation services for
+                                    individuals and corporations.
+                                </p>
                             </div>
                         </div>
 
-                        <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                            <button
-                                class="text-gray-900 font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 transition-all duration-300 text-sm sm:text-base"
-                                style="background: linear-gradient(135deg, #ffd54f 0%, #ffd54f 100%);"
-                                onmouseover="this.style.background='linear-gradient(135deg, #ffd54f 0%, #e6c14d 100%)'"
-                                onmouseout="this.style.background='linear-gradient(135deg, #ffd54f 0%, #ffd54f 100%)'">
-                                Explore Services
-                            </button>
-                            <button
-                                class="border-2 border-white text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 text-sm sm:text-base">
-                                Get Consultation
-                            </button>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Tax Planning & Structuring
+                                </h4>
+                                <p class="text-sm text-[#333740] font-nova">Strategic optimization of tax positions</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Transfer Pricing</h4>
+                                <p class="text-sm text-[#333740] font-nova">International transfer pricing advisory</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Income Tax Advisory</h4>
+                                <p class="text-sm text-[#333740] font-nova">Expert guidance on tax regulations</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Tax Assessments</h4>
+                                <p class="text-sm text-[#333740] font-nova">Appeals and assessment support</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Hero Visual -->
-                    <div class="scroll-reveal lg:order-2 mt-8 lg:mt-0">
-                        <div class="relative max-w-md sm:max-w-lg mx-auto lg:max-w-none">
-                            <!-- Main Services Card -->
+                    <!-- Indirect Taxation -->
+                    <div
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        <div class="flex items-start mb-6">
                             <div
-                                class="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-all duration-500">
+                                class="w-16 h-16 bg-[#26A69A] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#1A1A1A] mb-3 font-spartan">Indirect Taxation</h3>
+                                <p class="text-[#333740] mb-6 font-nova">
+                                    GST compliance, audit support, dispute resolution, and comprehensive indirect tax
+                                    advisory services.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">GST Advisory</h4>
+                                <p class="text-sm text-[#333740] font-nova">Complete GST compliance solutions</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">GST Audits</h4>
+                                <p class="text-sm text-[#333740] font-nova">Assessment and audit representation</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">E-invoicing</h4>
+                                <p class="text-sm text-[#333740] font-nova">Digital compliance solutions</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Return Filing</h4>
+                                <p class="text-sm text-[#333740] font-nova">Comprehensive filing support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Litigation Services -->
+                    <div
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        <div class="flex items-start mb-6">
+                            <div
+                                class="w-16 h-16 bg-[#3F51B5] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#1A1A1A] mb-3 font-spartan">Litigation Services</h3>
+                                <p class="text-[#333740] mb-6 font-nova">
+                                    Expert representation before Supreme Court, High Courts, tribunals, and regulatory
+                                    authorities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Supreme Court</h4>
+                                <p class="text-sm text-[#333740] font-nova">Apex court representation</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">High Court</h4>
+                                <p class="text-sm text-[#333740] font-nova">Multi-jurisdictional expertise</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Tribunal Representation</h4>
+                                <p class="text-sm text-[#333740] font-nova">ITAT, CESTAT proceedings</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Constitutional Challenges
+                                </h4>
+                                <p class="text-sm text-[#333740] font-nova">Complex legal argumentation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advisory & Compliance -->
+                    <div
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        <div class="flex items-start mb-6">
+                            <div
+                                class="w-16 h-16 bg-[#29B6F6] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-[#1A1A1A] mb-3 font-spartan">Advisory & Compliance
+                                </h3>
+                                <p class="text-[#333740] mb-6 font-nova">
+                                    Strategic advisory services and comprehensive compliance support across all
+                                    regulatory requirements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Regulatory Updates</h4>
+                                <p class="text-sm text-[#333740] font-nova">Policy analysis and guidance</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Risk Management</h4>
+                                <p class="text-sm text-[#333740] font-nova">Proactive compliance strategies</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Statutory Filings</h4>
+                                <p class="text-sm text-[#333740] font-nova">End-to-end filing support</p>
+                            </div>
+                            <div class="bg-[#EAEAEA]/50 rounded-lg p-4">
+                                <h4 class="font-semibold text-[#1A1A1A] mb-2 font-spartan">Documentation</h4>
+                                <p class="text-sm text-[#333740] font-nova">Regulatory reporting assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Expertise Section -->
+                <div class="bg-[#1A1A1A] rounded-3xl p-8 lg:p-12 mb-12">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 font-spartan">Industry Expertise</h3>
+                        <p class="text-[#EAEAEA] font-nova">Serving clients across diverse sectors with specialized
+                            knowledge and tailored solutions</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#FFD54F]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#FFD54F]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">Manufacturing</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#26A69A]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#26A69A]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">IT & Software</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#29B6F6]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#29B6F6]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">FMCG</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#66BB6A]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#66BB6A]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">Pharmaceuticals</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#FFA726]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#FFA726]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">Real Estate</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#3F51B5]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#3F51B5]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">FinTech</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#E91E63]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-[#E91E63]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">E-commerce</h4>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-16 h-16 bg-[#FF9800]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <span class="text-[#FF9800] font-bold text-lg font-spartan">+</span>
+                            </div>
+                            <h4 class="font-semibold text-white font-spartan">Many More</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <!-- <div class="text-center">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F]/10 border border-[#FFD54F]/30 mb-6">
+                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">Expert Legal Solutions</span>
+                    </div>
+                    <button
+                        class="bg-[#FFD54F] text-[#1A1A1A] font-bold px-8 py-4 rounded-xl hover:bg-[#e6c14d] transition-colors font-spartan">
+                        Explore Detailed Services
+                    </button>
+                </div> -->
+
+            </div>
+        </section>
+
+
+        <!-- Service Delivery Process Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-sm font-semibold uppercase tracking-widest mb-4 text-[#FFD54F]">
+                        Our Process
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#1A1A1A] tracking-tight mb-6 font-spartan">
+                        How We Deliver Excellence
+                    </h2>
+                    <p class="text-lg text-[#333740] leading-relaxed font-nova">
+                        Our structured approach ensures every client receives tailored solutions backed by deep
+                        expertise, ethical practice, and continuous support throughout their legal journey.
+                    </p>
+                </div>
+
+                <!-- Process Timeline -->
+                <div class="relative">
+                    <!-- Desktop Timeline Line -->
+                    <div
+                        class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#EAEAEA] transform -translate-y-1/2 z-0">
+                    </div>
+                    <div
+                        class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-[#FFD54F] transform -translate-y-1/2 z-0 w-full">
+                    </div>
+
+                    <!-- Mobile Timeline Line -->
+                    <div class="md:hidden absolute left-8 top-0 bottom-0 w-1 bg-[#FFD54F] z-0"></div>
+
+                    <!-- Process Steps Grid -->
+                    <div class="grid md:grid-cols-4 gap-8 relative z-10">
+
+                        <!-- Step 1: Initial Consultation -->
+                        <div class="group">
+                            <div class="flex items-start md:flex-col md:items-center text-left md:text-center">
+                                <!-- Step Number -->
                                 <div
-                                    class="bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-white relative overflow-hidden">
-                                    <!-- Background Pattern -->
-                                    <div class="absolute inset-0 opacity-10">
-                                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-                                            <defs>
-                                                <pattern id="serviceGrid" width="10" height="10"
-                                                    patternUnits="userSpaceOnUse">
-                                                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white"
-                                                        stroke-width="0.5" />
-                                                </pattern>
-                                            </defs>
-                                            <rect width="100" height="100" fill="url(#serviceGrid)" />
-                                        </svg>
-                                    </div>
+                                    class="w-16 h-16 bg-[#FFD54F] rounded-full flex items-center justify-center mr-6 md:mr-0 md:mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-2xl font-bold text-[#1A1A1A] font-spartan">1</span>
+                                </div>
 
-                                    <div class="relative z-10">
-                                        <div class="text-center mb-4 sm:mb-6">
-                                            <div
-                                                class="w-12 sm:w-16 lg:w-20 h-12 sm:h-16 lg:h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <svg class="w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                                </svg>
-                                            </div>
-                                            <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-2">Complete Legal
-                                                Solutions</h3>
-                                            <p class="text-blue-200 text-sm sm:text-base">End-to-end services</p>
+                                <!-- Step Content -->
+                                <div class="flex-1">
+                                    <div
+                                        class="bg-[#EAEAEA]/30 rounded-2xl p-6 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg">
+                                        <div class="mb-4">
+                                            <svg class="w-8 h-8 text-[#FFD54F] mx-auto md:mx-auto mb-4" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                            </svg>
                                         </div>
-
-                                        <div class="grid grid-cols-2 gap-2 sm:gap-4">
-                                            <div class="bg-white/10 rounded-lg p-2 sm:p-3 lg:p-4 text-center">
-                                                <div class="font-bold text-sm sm:text-lg lg:text-xl mb-1">Tax Advisory
-                                                </div>
-                                                <div class="text-blue-200 text-xs sm:text-sm">Expert Guidance</div>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2 sm:p-3 lg:p-4 text-center">
-                                                <div class="font-bold text-sm sm:text-lg lg:text-xl mb-1">Legal Support
-                                                </div>
-                                                <div class="text-blue-200 text-xs sm:text-sm">Professional Help</div>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2 sm:p-3 lg:p-4 text-center">
-                                                <div class="font-bold text-sm sm:text-lg lg:text-xl mb-1">Compliance
-                                                </div>
-                                                <div class="text-blue-200 text-xs sm:text-sm">Stay Compliant</div>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2 sm:p-3 lg:p-4 text-center">
-                                                <div class="font-bold text-sm sm:text-lg lg:text-xl mb-1">Planning</div>
-                                                <div class="text-blue-200 text-xs sm:text-sm">Strategic Advice</div>
-                                            </div>
+                                        <h3 class="text-xl font-bold text-[#1A1A1A] mb-3 font-spartan">Initial
+                                            Consultation</h3>
+                                        <p class="text-[#333740] text-sm leading-relaxed font-nova">
+                                            Understanding your unique legal and tax challenges through comprehensive
+                                            discussions and needs assessment.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-[#FFD54F]/20 text-[#FFD54F] px-2 py-1 rounded font-spartan">Free
+                                                Assessment</span>
+                                            <span
+                                                class="text-xs bg-[#FFD54F]/20 text-[#FFD54F] px-2 py-1 rounded font-spartan">24/7
+                                                Available</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Floating Elements -->
-                            <div
-                                class="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-10 sm:w-16 lg:w-20 h-10 sm:h-16 lg:h-20 bg-[#ffd54f]/20 rounded-full blur-lg floating-animation">
+                        <!-- Step 2: Strategy Development -->
+                        <div class="group">
+                            <div class="flex items-start md:flex-col md:items-center text-left md:text-center">
+                                <!-- Step Number -->
+                                <div
+                                    class="w-16 h-16 bg-[#26A69A] rounded-full flex items-center justify-center mr-6 md:mr-0 md:mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-2xl font-bold text-white font-spartan">2</span>
+                                </div>
+
+                                <!-- Step Content -->
+                                <div class="flex-1">
+                                    <div
+                                        class="bg-[#EAEAEA]/30 rounded-2xl p-6 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#26A69A] hover:shadow-lg">
+                                        <div class="mb-4">
+                                            <svg class="w-8 h-8 text-[#26A69A] mx-auto mb-4" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-[#1A1A1A] mb-3 font-spartan">Strategy
+                                            Development</h3>
+                                        <p class="text-[#333740] text-sm leading-relaxed font-nova">
+                                            Crafting customized legal and tax strategies aligned with your business
+                                            objectives and regulatory landscape.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-[#26A69A]/20 text-[#26A69A] px-2 py-1 rounded font-spartan">Custom
+                                                Solutions</span>
+                                            <span
+                                                class="text-xs bg-[#26A69A]/20 text-[#26A69A] px-2 py-1 rounded font-spartan">Expert
+                                                Analysis</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-8 sm:w-12 lg:w-16 h-8 sm:h-12 lg:h-16 bg-purple-400/20 rounded-full blur-lg floating-animation"
-                                style="animation-delay: 3s;"></div>
+                        </div>
+
+                        <!-- Step 3: Implementation -->
+                        <div class="group">
+                            <div class="flex items-start md:flex-col md:items-center text-left md:text-center">
+                                <!-- Step Number -->
+                                <div
+                                    class="w-16 h-16 bg-[#3F51B5] rounded-full flex items-center justify-center mr-6 md:mr-0 md:mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-2xl font-bold text-white font-spartan">3</span>
+                                </div>
+
+                                <!-- Step Content -->
+                                <div class="flex-1">
+                                    <div
+                                        class="bg-[#EAEAEA]/30 rounded-2xl p-6 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#3F51B5] hover:shadow-lg">
+                                        <div class="mb-4">
+                                            <svg class="w-8 h-8 text-[#3F51B5] mx-auto mb-4" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-[#1A1A1A] mb-3 font-spartan">Implementation
+                                        </h3>
+                                        <p class="text-[#333740] text-sm leading-relaxed font-nova">
+                                            Executing strategies with precision through expert representation,
+                                            documentation, and compliance management.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-[#3F51B5]/20 text-[#3F51B5] px-2 py-1 rounded font-spartan">Expert
+                                                Execution</span>
+                                            <span
+                                                class="text-xs bg-[#3F51B5]/20 text-[#3F51B5] px-2 py-1 rounded font-spartan">Full
+                                                Documentation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Monitoring & Support -->
+                        <div class="group">
+                            <div class="flex items-start md:flex-col md:items-center text-left md:text-center">
+                                <!-- Step Number -->
+                                <div
+                                    class="w-16 h-16 bg-[#29B6F6] rounded-full flex items-center justify-center mr-6 md:mr-0 md:mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                                    <span class="text-2xl font-bold text-white font-spartan">4</span>
+                                </div>
+
+                                <!-- Step Content -->
+                                <div class="flex-1">
+                                    <div
+                                        class="bg-[#EAEAEA]/30 rounded-2xl p-6 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#29B6F6] hover:shadow-lg">
+                                        <div class="mb-4">
+                                            <svg class="w-8 h-8 text-[#29B6F6] mx-auto mb-4" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-[#1A1A1A] mb-3 font-spartan">Monitoring &
+                                            Support</h3>
+                                        <p class="text-[#333740] text-sm leading-relaxed font-nova">
+                                            Continuous monitoring, compliance checks, and proactive support to adapt to
+                                            regulatory changes and emerging challenges.
+                                        </p>
+                                        <div class="mt-4 flex flex-wrap gap-2">
+                                            <span
+                                                class="text-xs bg-[#29B6F6]/20 text-[#29B6F6] px-2 py-1 rounded font-spartan">Ongoing
+                                                Support</span>
+                                            <span
+                                                class="text-xs bg-[#29B6F6]/20 text-[#29B6F6] px-2 py-1 rounded font-spartan">Regular
+                                                Updates</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Process Benefits -->
+                <div class="mt-16 bg-[#1A1A1A] rounded-3xl p-8 lg:p-12">
+                    <div class="text-center mb-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 font-spartan">Why Our Process Works
+                        </h3>
+                        <p class="text-[#EAEAEA] font-nova">Built on the pillars of Knowledge, Integrity, and
+                            Collaboration</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Knowledge -->
+                        <div class="text-center">
+                            <div
+                                class="w-20 h-20 bg-[#FFD54F] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-[#1A1A1A]" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-4 font-spartan">Deep Knowledge</h4>
+                            <p class="text-[#EAEAEA] font-nova">24+ years of combined expertise across direct and
+                                indirect taxation, constitutional law, and regulatory compliance.</p>
+                        </div>
+
+                        <!-- Integrity -->
+                        <div class="text-center">
+                            <div
+                                class="w-20 h-20 bg-[#26A69A] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-4 font-spartan">Unwavering Integrity</h4>
+                            <p class="text-[#EAEAEA] font-nova">Ethical practice standards ensuring transparency, trust,
+                                and professional excellence in every client interaction.</p>
+                        </div>
+
+                        <!-- Collaboration -->
+                        <div class="text-center">
+                            <div
+                                class="w-20 h-20 bg-[#3F51B5] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-4 font-spartan">True Collaboration</h4>
+                            <p class="text-[#EAEAEA] font-nova">Partnership approach leveraging our extensive network of
+                                specialists across India's legal and tax ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-12">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F]/10 border border-[#FFD54F]/30 mb-6">
+                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">Ready to Get Started?</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button
+                            class="bg-[#FFD54F] text-[#1A1A1A] font-bold px-8 py-3 rounded-xl hover:bg-[#e6c14d] transition-colors font-spartan">
+                            Schedule Free Consultation
+                        </button>
+                        <button
+                            class="border-2 border-[#1A1A1A] text-[#1A1A1A] font-bold px-8 py-3 rounded-xl hover:bg-[#1A1A1A] hover:text-white transition-colors font-spartan">
+                            Download Process Guide
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
