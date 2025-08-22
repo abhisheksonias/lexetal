@@ -99,11 +99,13 @@ function setActiveNavLink(currentPage) {
         // Reset all links to default state first
         link.style.backgroundColor = '';
         link.style.color = '';
+        link.style.borderRadius = '';
         
         if (href === currentPage) {
-            // Add active styles
+            // Add active styles with rounded corners
             link.style.backgroundColor = '#ffd54f';
             link.style.color = '#1a1a1a';
+            link.style.borderRadius = '0.5rem'; // rounded-lg equivalent
         }
     });
 }
