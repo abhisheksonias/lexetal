@@ -18,6 +18,100 @@
     transform: scale(0.95);
 }
 
+/* Essential Hero Section Animations - Reduced */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in-up {
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Continuous Slider Animation - Smooth */
+@keyframes slide-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes slide-smooth {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Essential Animation Classes - Simplified */
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+    animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spin-slow 30s linear infinite;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-slide-infinite {
+    animation: slide-infinite 30s linear infinite;
+}
+
+.animate-slide-smooth {
+    animation: slide-smooth 20s linear infinite;
+}
+
+/* Enhanced slider hover effects */
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.slider-container .slider-track {
+    transition: transform 0.3s ease;
+}
+
+/* Smooth scroll behavior for entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Client logo hover chain effect */
+.slider-track:hover .flex-shrink-0:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.slider-track:hover .flex-shrink-0:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+/* Additional micro-interactions */
+.slider-track .flex-shrink-0 {
+    transform-origin: center;
+    will-change: transform;
+}
+
 /* Hide scrollbar for horizontal scroll */
 .scrollbar-hide {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
