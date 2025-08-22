@@ -88,83 +88,80 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const container = entry.target;
-            const leftCircle = container.querySelector('.scroll-circle-left');
-            const centerCircle = container.querySelector('.scroll-circle-center');
-            const rightCircle = container.querySelector('.scroll-circle-right');
-            const textContent = container.querySelector('.scroll-text');
             
             if (entry.isIntersecting) {
                 if (isMobile()) {
-                    // MOBILE: No animation - just show elements
-                    if (leftCircle) {
-                        leftCircle.style.opacity = '1';
-                        leftCircle.style.transform = 'none';
-                        leftCircle.style.transition = 'none';
-                    }
-                    
-                    if (centerCircle) {
-                        centerCircle.style.opacity = '1';
-                        centerCircle.style.transform = 'none';
-                        centerCircle.style.transition = 'none';
-                    }
-                    
-                    if (rightCircle) {
-                        rightCircle.style.opacity = '1';
-                        rightCircle.style.transform = 'none';
-                        rightCircle.style.transition = 'none';
-                    }
-                    
-                    if (textContent) {
-                        textContent.style.opacity = '1';
-                        textContent.style.transform = 'none';
-                        textContent.style.transition = 'none';
-                    }
+                    // MOBILE: Immediately show all elements for horizontal scroll
+                    const mobileElements = container.querySelectorAll('.lg\\:hidden .scroll-circle-left, .lg\\:hidden .scroll-circle-center, .lg\\:hidden .scroll-circle-right');
+                    mobileElements.forEach(element => {
+                        if (element) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'none';
+                            element.style.transition = 'opacity 0.3s ease';
+                        }
+                    });
                 } else {
-                    // DESKTOP: Full animation - Slide in from left and right
-                    if (leftCircle) {
-                        leftCircle.style.opacity = '1';
-                        leftCircle.style.transform = 'translateX(0)';
-                    }
-                    
-                    if (centerCircle) {
-                        centerCircle.style.opacity = '1';
-                        centerCircle.style.transform = 'scale(1)';
-                    }
-                    
-                    if (rightCircle) {
-                        rightCircle.style.opacity = '1';
-                        rightCircle.style.transform = 'translateX(0)';
-                    }
-                    
-                    if (textContent) {
-                        textContent.style.opacity = '1';
-                        textContent.style.transform = 'translateY(0)';
+                    // DESKTOP: Full animation - Get desktop elements
+                    const desktopContainer = container.querySelector('.hidden.lg\\:block');
+                    if (desktopContainer) {
+                        const leftCircle = desktopContainer.querySelector('.scroll-circle-left');
+                        const centerCircle = desktopContainer.querySelector('.scroll-circle-center');
+                        const rightCircle = desktopContainer.querySelector('.scroll-circle-right');
+                        const textContent = desktopContainer.querySelector('.scroll-text');
+                        
+                        if (leftCircle) {
+                            leftCircle.style.opacity = '1';
+                            leftCircle.style.transform = 'translateX(0)';
+                        }
+                        
+                        if (centerCircle) {
+                            centerCircle.style.opacity = '1';
+                            centerCircle.style.transform = 'scale(1)';
+                        }
+                        
+                        if (rightCircle) {
+                            rightCircle.style.opacity = '1';
+                            rightCircle.style.transform = 'translateX(0)';
+                        }
+                        
+                        if (textContent) {
+                            textContent.style.opacity = '1';
+                            textContent.style.transform = 'translateY(0)';
+                        }
                     }
                 }
             } else {
                 if (isMobile()) {
-                    // MOBILE: No exit animation - keep elements visible
+                    // MOBILE: Keep elements visible even when out of view
                     return;
                 } else {
-                    // DESKTOP: Exit animation - Slide out to left and right
-                    if (leftCircle) {
-                        leftCircle.style.opacity = '0';
-                        leftCircle.style.transform = 'translateX(-150px)';
-                    }
-                    
-                    if (centerCircle) {
-                        centerCircle.style.opacity = '0.3';
-                        centerCircle.style.transform = 'scale(0.9)';
-                    }
-                    
-                    if (rightCircle) {
-                        rightCircle.style.opacity = '0';
-                        rightCircle.style.transform = 'translateX(150px)';
-                    }
-                    
-                    if (textContent) {
-                        textContent.style.opacity = '0';
-                        textContent.style.transform = 'translateY(30px)';
+                    // DESKTOP: Exit animation - Get desktop elements
+                    const desktopContainer = container.querySelector('.hidden.lg\\:block');
+                    if (desktopContainer) {
+                        const leftCircle = desktopContainer.querySelector('.scroll-circle-left');
+                        const centerCircle = desktopContainer.querySelector('.scroll-circle-center');
+                        const rightCircle = desktopContainer.querySelector('.scroll-circle-right');
+                        const textContent = desktopContainer.querySelector('.scroll-text');
+                        
+                        if (leftCircle) {
+                            leftCircle.style.opacity = '0';
+                            leftCircle.style.transform = 'translateX(-150px)';
+                        }
+                        
+                        if (centerCircle) {
+                            centerCircle.style.opacity = '0';
+                            centerCircle.style.transform = 'scale(0.9)';
+                        }
+                        
+                        if (rightCircle) {
+                            rightCircle.style.opacity = '0';
+                            rightCircle.style.transform = 'translateX(150px)';
+                        }
+                        
+                        if (textContent) {
+                            textContent.style.opacity = '0';
+                            textContent.style.transform = 'translateY(30px)';
+                        }
                     }
                 }
             }
@@ -177,20 +174,45 @@ function initScrollAnimations() {
     // Listen for window resize to handle orientation changes
     window.addEventListener('resize', () => {
         const container = document.getElementById('core-pillars-circles');
-        if (container && isMobile()) {
-            // Reset all elements to visible state on mobile
-            const leftCircle = container.querySelector('.scroll-circle-left');
-            const centerCircle = container.querySelector('.scroll-circle-center');
-            const rightCircle = container.querySelector('.scroll-circle-right');
-            const textContent = container.querySelector('.scroll-text');
-            
-            [leftCircle, centerCircle, rightCircle, textContent].forEach(element => {
-                if (element) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'none';
-                    element.style.transition = 'none';
+        if (container) {
+            if (isMobile()) {
+                // Reset all mobile elements to visible state on mobile
+                const mobileElements = container.querySelectorAll('.lg\\:hidden .scroll-circle-left, .lg\\:hidden .scroll-circle-center, .lg\\:hidden .scroll-circle-right');
+                mobileElements.forEach(element => {
+                    if (element) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'none';
+                        element.style.transition = 'opacity 0.3s ease';
+                    }
+                });
+            } else {
+                // Reset desktop elements to initial state for animation
+                const desktopContainer = container.querySelector('.hidden.lg\\:block');
+                if (desktopContainer) {
+                    const leftCircle = desktopContainer.querySelector('.scroll-circle-left');
+                    const centerCircle = desktopContainer.querySelector('.scroll-circle-center');
+                    const rightCircle = desktopContainer.querySelector('.scroll-circle-right');
+                    const textContent = desktopContainer.querySelector('.scroll-text');
+                    
+                    // Reset to initial animated state
+                    if (leftCircle) {
+                        leftCircle.style.opacity = '0';
+                        leftCircle.style.transform = 'translateX(-150px)';
+                    }
+                    if (centerCircle) {
+                        centerCircle.style.opacity = '0';
+                        centerCircle.style.transform = 'scale(0.9)';
+                    }
+                    if (rightCircle) {
+                        rightCircle.style.opacity = '0';
+                        rightCircle.style.transform = 'translateX(150px)';
+                    }
+                    if (textContent) {
+                        textContent.style.opacity = '0';
+                        textContent.style.transform = 'translateY(30px)';
+                    }
                 }
-            });
+            }
         }
     });
 
