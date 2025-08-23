@@ -149,10 +149,11 @@
     <main>
         <!-- Hero Section -->
         <section
-            class="relative flex h-[calc(100vh-80px)] min-h-[600px] items-center overflow-hidden bg-white bg-[url('images/herobg2.png')] bg-cover bg-center bg-no-repeat">
-            <div class="relative z-10 mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-8 items-center">
-
-                <!-- Services Content (left side) -->
+            class="relative flex flex-col lg:flex-row h-[calc(100vh-80px)] min-h-[600px] items-center overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]">
+            
+            <!-- Left: Content -->
+            <div class="flex-1 flex flex-col justify-center px-6 py-16 lg:py-0 lg:pl-20 lg:pr-8 z-10 relative">
+                <!-- Services Content -->
                 <div class="text-center lg:text-left">
                     <div
                         class="inline-flex items-center px-4 py-1.5 rounded-full mb-6 border border-[#FFD54F]/30 bg-[#333740]">
@@ -197,13 +198,16 @@
                         <span>✓ Expert Legal Team</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Hero Visual (right side) -->
-                <div class="hidden lg:block mx-auto w-full max-w-md">
-                    <div
-                        class="bg-[#333740]/40 backdrop-blur-sm border border-[#EAEAEA]/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl transition-all duration-500">
+            <!-- Right: Visual Content -->
+            <div class="hidden lg:flex flex-1 items-center justify-center relative h-full overflow-hidden">
+                <div class="w-full h-full flex items-center justify-center relative">
+                    <div class="mx-auto w-full max-w-md">
                         <div
-                            class="bg-gradient-to-br from-[#333740] to-[#1A1A1A] rounded-xl sm:rounded-2xl p-6 lg:p-8 text-[#EAEAEA] relative overflow-hidden border border-[#FFD54F]/20">
+                            class="bg-[#333740]/40 backdrop-blur-sm border border-[#EAEAEA]/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl transition-all duration-500">
+                            <div
+                                class="bg-gradient-to-br from-[#333740] to-[#1A1A1A] rounded-xl sm:rounded-2xl p-6 lg:p-8 text-[#EAEAEA] relative overflow-hidden border border-[#FFD54F]/20">
                             <div class="absolute inset-0 opacity-5">
                                 <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
                                     <defs>
@@ -270,6 +274,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
 
