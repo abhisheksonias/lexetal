@@ -50,6 +50,68 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Custom Styles for Scroll Animations -->
+    <style>
+        /* Scroll animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease;
+        }
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+        .slide-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.7s ease;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered animations */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+    </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -98,10 +160,10 @@
                 <!-- Right Section: Contact Button & Mobile Menu Toggle -->
                 <div class="flex items-center gap-x-4">
                     <div class="hidden lg:block">
-                        <button
+                        <a href="contact.html"
                             class="btn-shine relative overflow-hidden rounded-lg bg-[#ffd54f] px-6 py-2.5 text-sm font-semibold text-[#333740] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-opacity-90 hover:shadow-lg hover:shadow-[#ffd54f]/20">
                             Contact Us
-                        </button>
+                        </a>
                     </div>
 
                     <!-- Mobile Menu Button -->
@@ -135,11 +197,12 @@
                     class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">Services</a>
                 <a href="resources.html"
                     class="block rounded-lg px-3 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/5 hover:text-[#ffd54f]">Resources</a>
+                
                 <div class="border-t border-white/10 pt-4 mt-2">
-                    <button
-                        class="btn-shine relative overflow-hidden w-full rounded-lg bg-[#ffd54f] px-5 py-2.5 text-base font-semibold text-[#333740] shadow-sm transition-all duration-300 hover:bg-opacity-90">
+                    <a href="contact.html"
+                        class="btn-shine relative overflow-hidden block w-full rounded-lg bg-[#ffd54f] px-5 py-2.5 text-base font-semibold text-[#333740] shadow-sm transition-all duration-300 hover:bg-opacity-90 text-center">
                         Contact Us
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -283,7 +346,7 @@
             <div class="container mx-auto px-4 lg:px-8">
 
                 <!-- Section Header -->
-                <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="text-center max-w-4xl mx-auto mb-16 fade-in">
                     <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F] mb-6">
                         <span class="text-sm font-medium text-gray-600">OUR SERVICES</span>
                     </div>
@@ -303,7 +366,7 @@
 
                     <!-- Advisory Services -->
                     <div
-                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group slide-in-left stagger-1">
                         <div class="flex items-center mb-6">
                             <div
                                 class="w-14 h-14 bg-[#FFD54F] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -337,7 +400,7 @@
 
                     <!-- Litigation Services -->
                     <div
-                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group slide-in-up stagger-2">
                         <div class="flex items-center mb-6">
                             <div
                                 class="w-14 h-14 bg-[#3F51B5] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -370,7 +433,7 @@
 
                     <!-- Compliance Services -->
                     <div
-                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group">
+                        class="bg-[#EAEAEA]/30 rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-lg group slide-in-right stagger-3">
                         <div class="flex items-center mb-6">
                             <div
                                 class="w-14 h-14 bg-[#26A69A] rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -450,7 +513,7 @@
             <div class="container mx-auto px-4 lg:px-8">
 
                 <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
                     <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F] mb-6">
                         <span class="text-sm font-medium text-gray-600">CORE PRACTICE AREA</span>
                     </div>
@@ -468,7 +531,7 @@
 
                     <!-- Direct Taxation -->
                     <div
-                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group slide-in-left stagger-1">
                         <div class="flex items-start mb-6">
                             <div
                                 class="w-16 h-16 bg-[#FFD54F] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
@@ -510,7 +573,7 @@
 
                     <!-- Indirect Taxation -->
                     <div
-                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group slide-in-right stagger-2">
                         <div class="flex items-start mb-6">
                             <div
                                 class="w-16 h-16 bg-[#26A69A] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
@@ -550,7 +613,7 @@
 
                     <!-- Litigation Services -->
                     <div
-                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group slide-in-left stagger-3">
                         <div class="flex items-start mb-6">
                             <div
                                 class="w-16 h-16 bg-[#3F51B5] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
@@ -591,7 +654,7 @@
 
                     <!-- Advisory & Compliance -->
                     <div
-                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group">
+                        class="bg-white rounded-2xl p-8 border-2 border-[#333740]/20 transition-all duration-300 hover:border-[#FFD54F] hover:shadow-xl group slide-in-right stagger-4">
                         <div class="flex items-start mb-6">
                             <div
                                 class="w-16 h-16 bg-[#29B6F6] rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
@@ -632,7 +695,7 @@
                 </div>
 
                 <!-- Industry Expertise Section -->
-                <div class="bg-[#1A1A1A] rounded-3xl p-8 lg:p-12 mb-12">
+                <div class="bg-[#1A1A1A] rounded-3xl p-8 lg:p-12 mb-12 fade-in">
                     <div class="text-center mb-10">
                         <h3 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-6 font-spartan">
                             Industry Expertise</h3>
@@ -1264,7 +1327,7 @@
                         </li>
                         <li><a href="resources.html"
                                 class="hover:text-[#FFD54F] transition-colors text-sm">Resources</a></li>
-                        <li><a href="#contact" class="hover:text-[#FFD54F] transition-colors text-sm">Contact Us</a>
+                        <li><a href="contact.html" class="hover:text-[#FFD54F] transition-colors text-sm">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -1304,6 +1367,81 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/services.js"></script>
+    
+    <!-- Scroll Animations Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        }
+
+        // Scroll animations
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScrollAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const slideLeftElements = document.querySelectorAll('.slide-in-left');
+            const slideRightElements = document.querySelectorAll('.slide-in-right');
+            const slideUpElements = document.querySelectorAll('.slide-in-up');
+            const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+            
+            fadeElements.forEach(el => {
+                if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+            
+            slideLeftElements.forEach(el => {
+                if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+            
+            slideRightElements.forEach(el => {
+                if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+            
+            slideUpElements.forEach(el => {
+                if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+            
+            scrollRevealElements.forEach(el => {
+                if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Initial check
+        document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+        
+        // Check on scroll
+        window.addEventListener('scroll', handleScrollAnimations);
+        
+        // Check on resize
+        window.addEventListener('resize', handleScrollAnimations);
+    </script>
 </body>
 
 </html>
