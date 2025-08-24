@@ -27,6 +27,59 @@ function initFormSubmission() {
             inquiryForm.reset();
         });
     }
+
+    // Contact form handler
+    const contactForm = document.querySelector('form');
+    if (contactForm && !contactForm.id) { // Generic form without specific ID
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+        });
+    }
+}
+
+// Scroll Animations for Contact Page
+function initContactScrollAnimations() {
+    // Scroll animation helper function
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScrollAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const slideLeftElements = document.querySelectorAll('.slide-in-left');
+        const slideRightElements = document.querySelectorAll('.slide-in-right');
+
+        fadeElements.forEach(el => {
+            if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                el.classList.add('visible');
+            }
+        });
+
+        slideLeftElements.forEach(el => {
+            if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                el.classList.add('visible');
+            }
+        });
+
+        slideRightElements.forEach(el => {
+            if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    // Initial check
+    handleScrollAnimations();
+    
+    // Check on scroll
+    window.addEventListener('scroll', handleScrollAnimations);
 }
 
 // Testimonial Carousel
@@ -117,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initFormSubmission();
     initTestimonialCarousel();
+    initContactScrollAnimations(); // Initialize contact page scroll animations
     
     // Set active nav link based on current page (only if nav exists)
     if (document.querySelector('nav a[href*=".html"]')) {
