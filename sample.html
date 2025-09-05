@@ -41,54 +41,6 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Hero Slider Styles -->
-    <style>
-        .slider-wrapper {
-            position: relative;
-            width: 100%;
-        }
-        
-        .slide {
-            display: none;
-            animation: slideIn 0.5s ease-in-out;
-        }
-        
-        .slide.active {
-            display: block;
-        }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .dot.active {
-            background-color: #FFD54F !important;
-            transform: scale(1.2);
-        }
-        
-        /* Auto-advance animation */
-        .slide-progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #FFD54F, #ffeb3b);
-            animation: progress 6s linear infinite;
-        }
-        
-        @keyframes progress {
-            from { width: 0%; }
-            to { width: 100%; }
-        }
-    </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -202,115 +154,48 @@
                 <!-- <div class="absolute bottom-20 right-1/3 w-16 h-16 bg-[#FFD54F] opacity-4 rounded-full animate-float-gentle"></div> -->
             </div>
 
-            <!-- Hero Content Card Slider -->
+            <!-- Hero Content Card -->
             <div class="relative z-10 w-full max-w-7xl mx-auto">
-                <!-- Slider Container -->
-                <div class="relative overflow-hidden rounded-3xl">
-                    <div class="slider-wrapper" id="hero-slider">
-                        <!-- Founder Card 1 - Deepak Kumar Jain -->
-                        <div class="slide active bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/deepak.jpg" alt="Deepak Kumar Jain" class="w-full h-full object-cover">
-                                    </div>
-                                </div>
-                                <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
-                                    </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Deepak Kumar Jain
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Chartered Accountant & Tax Advisory Expert
-                                    </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A chartered Accountant, Company Secretary, and Law Graduate with 24+ years of post-qualification experience, specializing in Indirect Taxes. Leading expert in tax advisory and compliance solutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 shadow-2xl">
+                    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
-                        <!-- Founder Card 2 - Vivek Sarin -->
-                        <div class="slide bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/vivek.jpg" alt="Vivek Sarin" class="w-full h-full object-cover">
-                                    </div>
-                                </div>
-                                <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
-                                    </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Vivek Sarin
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Litigation Specialist & GST Advisor
-                                    </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        Passionate about building collaborative platforms that advance the practice of tax law. Expert in litigation and GST advisory with extensive experience in dispute resolution.
-                                    </p>
-                                </div>
+                        <!-- Left: Image/Logo Section -->
+                        <!-- <div class="flex-shrink-0">
+                            <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-[#FFD54F]/20 to-[#FFD54F]/10 border border-[#FFD54F]/30 flex items-center justify-center">
+                                <img src="images/logo.png" alt="LexEtAl Logo" class="w-32 h-32 lg:w-40 lg:h-40 object-contain">
                             </div>
-                        </div>
+                        </div> -->
 
-                        <!-- Founder Card 3 - Shreyas Shrivastava -->
-                        <div class="slide bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/shreya.jpg" alt="Shreyas Shrivastava" class="w-full h-full object-cover">
-                                    </div>
-                                </div>
-                                <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
-                                    </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Shreyas Shrivastava
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Commercial Tax Litigation Specialist
-                                    </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A seasoned Counsel at the Bombay High Court, renowned for meticulous approach to litigation and unwavering commitment to the legal profession.
-                                    </p>
-                                </div>
+                        <!-- Right: Content Section -->
+                        <div class="flex-1 text-center lg:text-left">
+                            <!-- Simple badge -->
+                            <div
+                                class="inline-flex items-center px-6 py-2 rounded-full mb-6 border border-[#FFD54F]/30 bg-[#333740]/50 backdrop-blur-sm">
+                                <span class="text-sm font-medium text-[#FFD54F] font-spartan tracking-wide">
+                                    Trusted Legal & Tax Experts
+                                </span>
                             </div>
+
+                            <!-- Main heading -->
+                            <h1
+                                class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl xl:text-6xl mb-6">
+                                Premier Organization of <span class="text-[#FFD54F]">TAX</span> Professionals
+                            </h1>
+
+                            <!-- Description -->
+                            <p
+                                class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8 max-w-2xl lg:max-w-none">
+                                Expert guidance for every stage of your tax journey—advisory, compliance, and dispute
+                                resolution under one roof. We pride ourselves in collaborating with our clients and
+                                advising them on matters that set benchmarks across industries.
+                            </p>
+
+                            <!-- CTA Buttons -->
+
                         </div>
                     </div>
-
-                    <!-- Navigation Dots -->
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                        <button class="dot active w-3 h-3 rounded-full bg-[#FFD54F] transition-all duration-300" onclick="currentSlide(1)"></button>
-                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" onclick="currentSlide(2)"></button>
-                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" onclick="currentSlide(3)"></button>
-                    </div>
-
-                    <!-- Navigation Arrows -->
-                    <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300" onclick="prevSlide()">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300" onclick="nextSlide()">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
                 </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col pt-6 sm:flex-row items-center justify-center gap-4">
+                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:items-start gap-4">
                     <a href="contact.html"
                         class="group relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#FFD54F]/90 px-8 py-4 text-base font-semibold font-spartan text-[#1A1A1A] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <span class="relative z-10">Get Free Consultation</span>
@@ -1043,115 +928,6 @@
     <script src="js/component-loader.js"></script>
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
-
-    <!-- Hero Slider Script -->
-    <script>
-        let currentSlideIndex = 1;
-        const totalSlides = 3;
-        let autoSlideInterval;
-
-        // Initialize slider
-        document.addEventListener('DOMContentLoaded', function() {
-            showSlide(currentSlideIndex);
-            startAutoSlide();
-        });
-
-        // Show specific slide
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            
-            if (n > totalSlides) currentSlideIndex = 1;
-            if (n < 1) currentSlideIndex = totalSlides;
-            
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            // Show current slide
-            if (slides[currentSlideIndex - 1]) {
-                slides[currentSlideIndex - 1].classList.add('active');
-            }
-            if (dots[currentSlideIndex - 1]) {
-                dots[currentSlideIndex - 1].classList.add('active');
-            }
-        }
-
-        // Go to specific slide
-        function currentSlide(n) {
-            currentSlideIndex = n;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Next slide
-        function nextSlide() {
-            currentSlideIndex++;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Previous slide
-        function prevSlide() {
-            currentSlideIndex--;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Auto advance slides
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                currentSlideIndex++;
-                showSlide(currentSlideIndex);
-            }, 6000); // Change slide every 6 seconds
-        }
-
-        // Reset auto slide timer
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Pause auto slide on hover
-        const sliderContainer = document.getElementById('hero-slider');
-        if (sliderContainer) {
-            sliderContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-            
-            sliderContainer.addEventListener('mouseleave', () => {
-                startAutoSlide();
-            });
-        }
-
-        // Touch/swipe support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        if (sliderContainer) {
-            sliderContainer.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            sliderContainer.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-        }
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide(); // Swipe left - next slide
-                } else {
-                    prevSlide(); // Swipe right - previous slide
-                }
-            }
-        }
-    </script>
 
     <!-- Initialize Brands & Clients Component -->
     <script>
