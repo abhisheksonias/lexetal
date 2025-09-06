@@ -41,39 +41,40 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- Hero Slider Styles -->
     <style>
         .slider-wrapper {
             position: relative;
             width: 100%;
         }
-        
+
         .slide {
             display: none;
             animation: slideIn 0.5s ease-in-out;
         }
-        
+
         .slide.active {
             display: block;
         }
-        
+
         @keyframes slideIn {
             from {
                 opacity: 0;
                 transform: translateX(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-        
+
         .dot.active {
             background-color: #FFD54F !important;
             transform: scale(1.2);
         }
-        
+
         /* Auto-advance animation */
         .slide-progress {
             position: absolute;
@@ -83,10 +84,15 @@
             background: linear-gradient(90deg, #FFD54F, #ffeb3b);
             animation: progress 6s linear infinite;
         }
-        
+
         @keyframes progress {
-            from { width: 0%; }
-            to { width: 100%; }
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -191,7 +197,7 @@
         <section
             class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]"
             style="background-image: url('images/pattern3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
- 
+
             <!-- Background overlay to ensure text readability -->
             <div class="absolute inset-0 bg-gradient-to-br from-[#1A1A1A]/30 via-[#333740]/20 to-[#1A1A1A]/30"></div>
 
@@ -208,81 +214,107 @@
                 <div class="relative overflow-hidden rounded-3xl">
                     <div class="slider-wrapper" id="hero-slider">
                         <!-- Founder Card 1 - Deepak Kumar Jain -->
-                        <div class="slide active bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
+                        <div
+                            class="slide active bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/deepak.jpg" alt="Deepak Kumar Jain" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/deepak.jpg" alt="Deepak Kumar Jain"
+                                            class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
                                 <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
+                                    <div
+                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
+                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
+                                            PARTNER</span>
                                     </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
+                                    <h1
+                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
                                         Deepak Kumar Jain
                                     </h1>
                                     <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
                                         Chartered Accountant & Tax Advisory Expert
                                     </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A chartered Accountant, Company Secretary, and Law Graduate with 24+ years of post-qualification experience, specializing in Indirect Taxes. Leading expert in tax advisory and compliance solutions.
+                                    <p
+                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
+                                        A chartered Accountant, Company Secretary, and Law Graduate with 24+ years of
+                                        post-qualification experience, specializing in Indirect Taxes. Leading expert in
+                                        tax advisory and compliance solutions.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Founder Card 2 - Vivek Sarin -->
-                        <div class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
+                        <div
+                            class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/vivek.jpg" alt="Vivek Sarin" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/vivek.jpg" alt="Vivek Sarin"
+                                            class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
                                 <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
+                                    <div
+                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
+                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
+                                            PARTNER</span>
                                     </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
+                                    <h1
+                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
                                         Vivek Sarin
                                     </h1>
                                     <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
                                         Litigation Specialist & GST Advisor
                                     </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        Passionate about building collaborative platforms that advance the practice of tax law. Expert in litigation and GST advisory with extensive experience in dispute resolution.
+                                    <p
+                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
+                                        Passionate about building collaborative platforms that advance the practice of
+                                        tax law. Expert in litigation and GST advisory with extensive experience in
+                                        dispute resolution.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Founder Card 3 - Shreyas Shrivastava -->
-                        <div class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
+                        <div
+                            class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/shreya.jpg" alt="Shreyas Shrivastava" class="w-full h-full object-cover">
+                                    <div
+                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/shreya.jpg" alt="Shreyas Shrivastava"
+                                            class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
                                 <div class="flex-1 text-center lg:text-left">
-                                    <div class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING PARTNER</span>
+                                    <div
+                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
+                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
+                                            PARTNER</span>
                                     </div>
-                                    <h1 class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
+                                    <h1
+                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
                                         Shreyas Shrivastava
                                     </h1>
                                     <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
                                         Commercial Tax Litigation Specialist
                                     </h2>
-                                    <p class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A seasoned Counsel at the Bombay High Court, renowned for meticulous approach to litigation and unwavering commitment to the legal profession.
+                                    <p
+                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
+                                        A seasoned Counsel at the Bombay High Court, renowned for meticulous approach to
+                                        litigation and unwavering commitment to the legal profession.
                                     </p>
                                 </div>
                             </div>
@@ -291,20 +323,31 @@
 
                     <!-- Navigation Dots -->
                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                        <button class="dot active w-3 h-3 rounded-full bg-[#FFD54F] transition-all duration-300" onclick="currentSlide(1)"></button>
-                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" onclick="currentSlide(2)"></button>
-                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" onclick="currentSlide(3)"></button>
+                        <button class="dot active w-3 h-3 rounded-full bg-[#FFD54F] transition-all duration-300"
+                            onclick="currentSlide(1)"></button>
+                        <button
+                            class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
+                            onclick="currentSlide(2)"></button>
+                        <button
+                            class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
+                            onclick="currentSlide(3)"></button>
                     </div>
 
                     <!-- Navigation Arrows -->
-                    <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300" onclick="prevSlide()">
+                    <button
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
+                        onclick="prevSlide()">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
                         </svg>
                     </button>
-                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300" onclick="nextSlide()">
+                    <button
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
+                        onclick="nextSlide()">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
                         </svg>
                     </button>
                 </div>
@@ -571,11 +614,11 @@
 
         <!-- Our Main Practices Section -->
         <section id="services" class="py-20 lg:py-20 bg-gray-50">
-            <div class="container mx-auto px-4 lg:px-8">
+            <div class="container mx-auto px-8 lg:px-16 xl:px-20">
 
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F] mb-6">
-                        <span class="text-sm font-medium text-gray-600">OUR EXPERTIES </span>
+                        <span class="text-sm font-medium text-gray-600">OUR EXPERTISE</span>
                     </div>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
                         Core Practice Areas
@@ -590,119 +633,94 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                         <!-- Tax Advisory Card -->
-                        <div class="group relative">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 rounded-3xl blur-sm transform group-hover:scale-105 transition-transform duration-500">
+                        <!-- 
+                        CHANGES APPLIED:
+                        - Removed the outer 'group' div and the inner absolute positioned div to eliminate hover effects and the glassmorphism background.
+                        - Added 'text-center' to this div to centralize all content.
+                        - Removed all 'group-hover:*' classes to disable hover-specific styles.
+                        - Made the 'Explore' link permanently visible and centered it.
+                    -->
+                        <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
+
+                            <!-- Icon -->
+                            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-black">
+                                <span class="text-2xl font-black text-white tracking-tight">TA</span>
                             </div>
-                            <div
-                                class="relative bg-gray-200 backdrop-blur-xl border border-white/50 rounded-3xl p-8  transition-all duration-500 group-hover:shadow-3xl group-hover:-translate-y-4 group-hover:bg-white/40">
 
+                            <!-- Title -->
+                            <h3 class="text-2xl font-black text-slate-800 mb-4">
+                                Tax Advisory
+                            </h3>
 
+                            <!-- Description -->
+                            <p class="text-slate-600 leading-relaxed text-base mb-6">
+                                We deliver strategic solutions to optimize liabilities, ensure rigorous compliance,
+                                and navigate dynamic global tax frameworks—empowering you to stay decisively ahead.
+                            </p>
 
-                                <!-- Icon Alternative - Using initials/letters -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-gradient-to-br from-slate-100/80 to-slate-200/40 backdrop-blur-sm border border-white/30 group-hover:scale-110 transition-all duration-300">
-                                    <span class="text-2xl font-black text-slate-700 tracking-tight">TA</span>
+                            <!-- Link -->
+                            <a href="#" class="flex items-center justify-center transition-all duration-300">
+                                <div class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
                                 </div>
-
-                                <h3
-                                    class="text-2xl font-black text-slate-800 mb-6 group-hover:text-slate-900 transition-colors duration-300">
-                                    Tax Advisory
-                                </h3>
-                                <p
-                                    class="text-slate-600 leading-relaxed text-base group-hover:text-slate-700 transition-colors duration-300 mb-6">
-                                    We deliver strategic solutions to optimize liabilities, ensure rigorous compliance,
-                                    and
-                                    navigate dynamic global tax frameworks—empowering you to stay decisively ahead.
-                                </p>
-
-                                <!-- Hover indicator -->
-                                <div
-                                    class="flex items-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                                    <div
-                                        class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-700">Explore</span>
-                                </div>
-                            </div>
+                                <span class="text-sm font-semibold text-slate-700">Explore</span>
+                            </a>
                         </div>
 
                         <!-- Tax Litigation Card -->
-                        <div class="group relative">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 rounded-3xl blur-sm transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
+
+                            <!-- Icon -->
+                            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-black">
+                                <span class="text-2xl font-black text-white tracking-tight">TL</span>
                             </div>
-                            <div
-                                class="relative bg-gray-200 backdrop-blur-xl border border-white/50 rounded-3xl p-8 transition-all duration-500 group-hover:shadow-3xl group-hover:-translate-y-4 group-hover:bg-white/40">
 
+                            <!-- Title -->
+                            <h3 class="text-2xl font-black text-slate-800 mb-4">
+                                Tax Litigation
+                            </h3>
 
+                            <!-- Description -->
+                            <p class="text-slate-600 leading-relaxed text-base mb-6">
+                                We advocate for clients across the full spectrum of tax controversy, from audits and
+                                administrative proceedings to complex litigation before judicial forums and tax
+                                authorities.
+                            </p>
 
-                                <!-- Icon Alternative - Using initials/letters -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-gradient-to-br from-slate-100/80 to-slate-200/40 backdrop-blur-sm border border-white/30 group-hover:scale-110 transition-all duration-300">
-                                    <span class="text-2xl font-black text-slate-700 tracking-tight">TL</span>
+                            <!-- Link -->
+                            <a href="#" class="flex items-center justify-center transition-all duration-300">
+                                <div class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
                                 </div>
-
-                                <h3
-                                    class="text-2xl font-black text-slate-800 mb-6 group-hover:text-slate-900 transition-colors duration-300">
-                                    Tax Litigation
-                                </h3>
-                                <p
-                                    class="text-slate-600 leading-relaxed text-base group-hover:text-slate-700 transition-colors duration-300 mb-6">
-                                    We advocate for clients across the full spectrum of tax controversy, from audits and
-                                    administrative proceedings to complex litigation before judicial forums and tax
-                                    authorities.
-                                </p>
-
-                                <!-- Hover indicator -->
-                                <div
-                                    class="flex items-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                                    <div
-                                        class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-700">Explore</span>
-                                </div>
-                            </div>
+                                <span class="text-sm font-semibold text-slate-700">Explore</span>
+                            </a>
                         </div>
 
                         <!-- GST & Indirect Taxes Card -->
-                        <div class="group relative">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-white/40 to-white/10 rounded-3xl blur-sm transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
+
+                            <!-- Icon -->
+                            <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-black">
+                                <span class="text-xl font-black text-white tracking-tight">GST</span>
                             </div>
-                            <div
-                                class="relative bg-gray-200 backdrop-blur-xl border border-white/50 rounded-3xl p-8 transition-all duration-500 group-hover:shadow-3xl group-hover:-translate-y-4 group-hover:bg-white/40">
 
+                            <!-- Title -->
+                            <h3 class="text-2xl font-black text-slate-800 mb-4">
+                                GST & Indirect Taxes
+                            </h3>
 
+                            <!-- Description -->
+                            <p class="text-slate-600 leading-relaxed text-base mb-6">
+                                We provide end-to-end advisory and compliance solutions for GST and all categories
+                                of
+                                indirect taxation, ensuring seamless navigation of regulatory complexities.
+                            </p>
 
-                                <!-- Icon Alternative - Using initials/letters -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-gradient-to-br from-slate-100/80 to-slate-200/40 backdrop-blur-sm border border-white/30 group-hover:scale-110 transition-all duration-300">
-                                    <span class="text-xl font-black text-slate-700 tracking-tight">GST</span>
+                            <!-- Link -->
+                            <a href="#" class="flex items-center justify-center transition-all duration-300">
+                                <div class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
                                 </div>
-
-                                <h3
-                                    class="text-2xl font-black text-slate-800 mb-6 group-hover:text-slate-900 transition-colors duration-300">
-                                    GST & Indirect Taxes
-                                </h3>
-                                <p
-                                    class="text-slate-600 leading-relaxed text-base group-hover:text-slate-700 transition-colors duration-300 mb-6">
-                                    We provide end-to-end advisory and compliance solutions for GST and all categories
-                                    of
-                                    indirect taxation, ensuring seamless navigation of regulatory complexities.
-                                </p>
-
-                                <!-- Hover indicator -->
-                                <div
-                                    class="flex items-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                                    <div
-                                        class="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-2">
-                                    </div>
-                                    <span class="text-sm font-semibold text-slate-700">Explore</span>
-                                </div>
-                            </div>
+                                <span class="text-sm font-semibold text-slate-700">Explore</span>
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1051,7 +1069,7 @@
         let autoSlideInterval;
 
         // Initialize slider
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             showSlide(currentSlideIndex);
             startAutoSlide();
         });
@@ -1060,14 +1078,14 @@
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
             const dots = document.querySelectorAll('.dot');
-            
+
             if (n > totalSlides) currentSlideIndex = 1;
             if (n < 1) currentSlideIndex = totalSlides;
-            
+
             // Hide all slides
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             // Show current slide
             if (slides[currentSlideIndex - 1]) {
                 slides[currentSlideIndex - 1].classList.add('active');
@@ -1118,7 +1136,7 @@
             sliderContainer.addEventListener('mouseenter', () => {
                 clearInterval(autoSlideInterval);
             });
-            
+
             sliderContainer.addEventListener('mouseleave', () => {
                 startAutoSlide();
             });
@@ -1142,7 +1160,7 @@
         function handleSwipe() {
             const swipeThreshold = 50;
             const diff = touchStartX - touchEndX;
-            
+
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
                     nextSlide(); // Swipe left - next slide

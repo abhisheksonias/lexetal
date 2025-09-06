@@ -1,151 +1,195 @@
-<section class="bg-[#333740]/20 py-16 lg:py-20 overflow-hidden">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Client Logos Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS has been slightly simplified. The hardcoded width on .logos-track is no longer needed 
+           as JavaScript now correctly calculates the required space by duplicating the logos. */
+
+        .logos-slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+        }
+
+        .logos-track {
+            display: flex;
+            gap: 1.5rem; /* Gap between logos */
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 40s; /* ADJUSTED: Duration increased for the longer track to maintain a fast but smooth speed */
+        }
+
+        .logos-slide-right {
+            animation-name: slideRightSeamless;
+        }
+
+        .logos-slide-left {
+            animation-name: slideLeftSeamless;
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            width: 140px; /* Consistent width for each logo container */
+        }
+
+        /* Pause animation on hover */
+        .logos-slider:hover .logos-track {
+            animation-play-state: paused;
+        }
+
+        /* Keyframes for a perfect seamless loop */
+        @keyframes slideRightSeamless {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0%); }
+        }
+
+        @keyframes slideLeftSeamless {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* Logo image styling */
+        .logo-item img {
+            max-height: 2.5rem; /* 40px */
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Logo image hover effect */
+        .logo-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Logo container (card) styling */
+        .logo-card {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1rem;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-item:hover .logo-card {
+            border-color: #cbd5e1; /* slate-300 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+<section class="bg-[#F8F9FA] py-16 lg:py-20 overflow-hidden">
     <div class="container mx-auto px-4 lg:px-8">
         <!-- Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F]/90 border border-slate-300/30 mb-4">
-                <span class="text-sm font-medium text-slate-700" id="badge-text">TRUSTED BY INDUSTRY LEADERS</span>
+            <div class="inline-flex items-center px-4 py-1 rounded-full bg-[#FFD54F] mb-4">
+                <span class="text-sm font-bold text-slate-800">TRUSTED BY INDUSTRY LEADERS</span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 tracking-tight mb-4" id="section-title">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
                 Our Prestigious Clients
             </h2>
-            <p class="text-base text-slate-600 leading-relaxed" id="section-description">
+            <p class="text-lg text-slate-600 leading-relaxed">
                 From Fortune 500 companies to emerging startups, we've earned the trust of organizations across
-                industries through exceptional legal and tax advisory services.
+                industries through exceptional advisory services.
             </p>
         </div>
 
         <!-- Continuous Client Logos Slider -->
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 md:gap-6" id="logo-grid">
-                <!-- Client Logo Template - Repeat as needed -->
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
+        <div class="max-w-7xl mx-auto space-y-8">
+            <!-- First Row - Moving Right -->
+            <div class="logos-slider">
+                <!-- 
+                  * FIX APPLIED:
+                  * The number of logos in the initial set has been doubled from 8 to 16.
+                  * This ensures the track is long enough to prevent gaps on wide screens.
+                  * The script will still duplicate this entire set for a seamless loop.
+                -->
+                <div class="logos-track logos-slide-right">
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Swiggy-Logo.png" alt="Swiggy"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2023/05/Paytm-Logo.png" alt="Paytm"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/01/Airtel-Logo.png" alt="Airtel"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/HDFC-Bank-Logo.png" alt="HDFC Bank"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/07/Tata-Logo.png" alt="TATA"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/02/PhonePe-Logo.png" alt="PhonePe"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Zomato-Logo.png" alt="Zomato"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2023/04/Bajaj-Logo.png" alt="Bajaj"></div></div>
+                    <!-- Duplicated set for longer track -->
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Swiggy-Logo.png" alt="Swiggy"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2023/05/Paytm-Logo.png" alt="Paytm"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/01/Airtel-Logo.png" alt="Airtel"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/HDFC-Bank-Logo.png" alt="HDFC Bank"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/07/Tata-Logo.png" alt="TATA"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/02/PhonePe-Logo.png" alt="PhonePe"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Zomato-Logo.png" alt="Zomato"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2023/04/Bajaj-Logo.png" alt="Bajaj"></div></div>
                 </div>
+            </div>
 
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
-                </div>
-
-                <div class="client-logo">
-                    <div
-                        class="bg-white border border-slate-300/40 rounded-lg p-4 transition-all duration-300 hover:border-slate-400 hover:shadow-md hover:scale-105 group aspect-square flex items-center justify-center">
-                        <img src="images/logo.png" alt="Client Logo"
-                            class="max-h-8 w-auto transition-transform duration-300 group-hover:scale-110">
-                    </div>
+            <!-- Second Row - Moving Left -->
+            <div class="logos-slider">
+                <div class="logos-track logos-slide-left">
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/ICICI-Bank-Logo.png" alt="ICICI Bank"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Myntra-Logo.png" alt="Myntra"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/02/MakeMyTrip-Logo.png" alt="MakeMyTrip"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Wipro-Logo.png" alt="Wipro"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Infosys-Logo.png" alt="Infosys"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/01/LIC-Logo.png" alt="LIC"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Oyo-Logo.png" alt="Oyo"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Larsen-Toubro-L-T-Logo.png" alt="L&T"></div></div>
+                    <!-- Duplicated set for longer track -->
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/ICICI-Bank-Logo.png" alt="ICICI Bank"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Myntra-Logo.png" alt="Myntra"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/02/MakeMyTrip-Logo.png" alt="MakeMyTrip"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Wipro-Logo.png" alt="Wipro"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Infosys-Logo.png" alt="Infosys"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2022/01/LIC-Logo.png" alt="LIC"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Oyo-Logo.png" alt="Oyo"></div></div>
+                    <div class="logo-item"><div class="logo-card"><img src="https://logolook.net/wp-content/uploads/2021/11/Larsen-Toubro-L-T-Logo.png" alt="L&T"></div></div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
+
+<!-- 
+  * This script automatically finds each logos-track, takes all the logos inside,
+  * clones them, and adds the clones to the end of the track.
+  * This creates the necessary duplication for a perfect, seamless loop without
+  * you needing to manually copy-paste logos in the HTML.
+-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tracks = document.querySelectorAll('.logos-track');
+
+        tracks.forEach(track => {
+            // Get all original logo items from the HTML
+            const logos = Array.from(track.children);
+            
+            // Clone each logo and append it to the track
+            logos.forEach(logo => {
+                const clone = logo.cloneNode(true);
+                track.appendChild(clone);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
 
