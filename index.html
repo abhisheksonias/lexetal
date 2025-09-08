@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS via CDN -->
@@ -198,124 +198,207 @@
             class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]"
             style="background-image: url('images/Pattern3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-            <!-- Background overlay to ensure text readability -->
-            <div class="absolute inset-0 bg-gradient-to-br from-[#1A1A1A]/30 via-[#333740]/20 to-[#1A1A1A]/30"></div>
-
-            <!-- Subtle Background Elements -->
-            <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <!-- Reduced floating circles -->
-                <!-- <div class="absolute top-20 left-10 w-24 h-24 bg-[#FFD54F] opacity-3 rounded-full animate-float-slow"></div> -->
-                <!-- <div class="absolute bottom-20 right-1/3 w-16 h-16 bg-[#FFD54F] opacity-4 rounded-full animate-float-gentle"></div> -->
-            </div>
-
             <!-- Hero Content Card Slider -->
             <div class="relative z-10 w-full max-w-7xl mx-auto">
                 <!-- Slider Container -->
-                <div class="relative overflow-hidden rounded-3xl">
+                <div class="relative overflow-hidden rounded-xl">
                     <div class="slider-wrapper" id="hero-slider">
-                        <!-- Founder Card 1 - Deepak Kumar Jain -->
-                        <div
-                            class="slide active bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                        <!-- Slide 1 -->
+                        <div class="slide active bg-white/10 border border-white/30 rounded-xl p-8 lg:p-12 shadow-2xl">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div
-                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/deepak.jpg" alt="Deepak Kumar Jain"
-                                            class="w-full h-full object-cover">
+                                    <div class="w-48 lg:w-72 h-full rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/deepak.jpg" alt="Managing Partner" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div
-                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
-                                            PARTNER</span>
+                                <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
+                                    <div>
+                                        <!-- Header with Orange Underline -->
+                                        <div class="mb-8">
+                                            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-spartan mb-2">
+                                                From The Founder's Desk
+                                            </h1>
+                                            <div class="w-24 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
+                                        </div>
+                                        <!-- Content Paragraphs -->
+                                        <div class="space-y-6 mb-8">
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                LexEtAl is a modern, innovation-led law firm that has built a reputation for
+                                                handling some of the most complex and high-stakes transactions ethically and
+                                                with precision.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We pride ourselves in collaborating with our clients and advising them on
+                                                matters that are first-of-their-kind, whether in scale, structure, or impact, 
+                                                setting benchmarks across industries.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We rely on sharp legal insight, strategic clarity, and the smart use of
+                                                technology to deliver outcomes that aren't just smart – they are smarter than the rest.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <h1
-                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Deepak Kumar Jain
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Chartered Accountant & Tax Advisory Expert
-                                    </h2>
-                                    <p
-                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A chartered Accountant, Company Secretary, and Law Graduate with 24+ years of
-                                        post-qualification experience, specializing in Indirect Taxes. Leading expert in
-                                        tax advisory and compliance solutions.
-                                    </p>
+                                    <!-- Signature and Title -->
+                                    <div class="border-t border-white/20 pt-6">
+                                        <div class="text-3xl lg:text-4xl text-[#FFD54F] font-script mb-2" style="font-family: 'Dancing Script', cursive;">
+                                            Deepak Kumar Jain
+                                        </div>
+                                        <div class="text-lg text-[#EAEAEA]/80 font-medium font-spartan">
+                                             Founding Member
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Founder Card 2 - Vivek Sarin -->
-                        <div
-                            class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                        <!-- Slide 2 -->
+                        <div class="slide bg-white/10 border border-white/30 rounded-xl p-8 lg:p-12 shadow-2xl">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div
-                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/vivek.jpg" alt="Vivek Sarin"
-                                            class="w-full h-full object-cover">
+                                    <div class="w-48 lg:w-72 h-full rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/shreya.jpg" alt="Managing Partner" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div
-                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
-                                            PARTNER</span>
+                                <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
+                                    <div>
+                                        <!-- Header with Orange Underline -->
+                                        <div class="mb-8">
+                                            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-spartan mb-2">
+                                                From The Founder's Desk
+                                            </h1>
+                                            <div class="w-24 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
+                                        </div>
+                                        <!-- Content Paragraphs -->
+                                        <div class="space-y-6 mb-8">
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                LexEtAl is a modern, innovation-led law firm that has built a reputation for
+                                                handling some of the most complex and high-stakes transactions ethically and
+                                                with precision.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We pride ourselves in collaborating with our clients and advising them on
+                                                matters that are first-of-their-kind, whether in scale, structure, or impact, 
+                                                setting benchmarks across industries.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We rely on sharp legal insight, strategic clarity, and the smart use of
+                                                technology to deliver outcomes that aren't just smart – they are smarter than the rest.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <h1
-                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Vivek Sarin
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Litigation Specialist & GST Advisor
-                                    </h2>
-                                    <p
-                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        Passionate about building collaborative platforms that advance the practice of
-                                        tax law. Expert in litigation and GST advisory with extensive experience in
-                                        dispute resolution.
-                                    </p>
+                                    <!-- Signature and Title -->
+                                    <div class="border-t border-white/20 pt-6">
+                                        <div class="text-3xl lg:text-4xl text-[#FFD54F] font-script mb-2" style="font-family: 'Dancing Script', cursive;">
+                                            Shreya Gupta
+                                        </div>
+                                        <div class="text-lg text-[#EAEAEA]/80 font-medium font-spartan">
+                                             Founding Member
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Founder Card 3 - Shreyas Shrivastava -->
-                        <div
-                            class="slide bg-white/15 backdrop-blur-sm border border-white/30 rounded-3xl p-8 lg:p-12 shadow-2xl">
-                            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                        <!-- Slide 3 -->
+                        <div class="slide bg-white/10 border border-white/30 rounded-xl p-8 lg:p-12 shadow-2xl">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
                                 <!-- Left: Founder Image -->
                                 <div class="flex-shrink-0">
-                                    <div
-                                        class="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
-                                        <img src="images/shreya.jpg" alt="Shreyas Shrivastava"
-                                            class="w-full h-full object-cover">
+                                    <div class="w-48 lg:w-72 h-full rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/vivek.jpg" alt="Managing Partner" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <!-- Right: Content -->
-                                <div class="flex-1 text-center lg:text-left">
-                                    <div
-                                        class="inline-flex items-center px-4 py-1 rounded-full mb-4 bg-[#FFD54F]/20 border border-[#FFD54F]/40">
-                                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">FOUNDING
-                                            PARTNER</span>
+                                <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
+                                    <div>
+                                        <!-- Header with Orange Underline -->
+                                        <div class="mb-8">
+                                            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-spartan mb-2">
+                                                From The Founder's Desk
+                                            </h1>
+                                            <div class="w-24 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
+                                        </div>
+                                        <!-- Content Paragraphs -->
+                                        <div class="space-y-6 mb-8">
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                LexEtAl is a modern, innovation-led law firm that has built a reputation for
+                                                handling some of the most complex and high-stakes transactions ethically and
+                                                with precision.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We pride ourselves in collaborating with our clients and advising them on
+                                                matters that are first-of-their-kind, whether in scale, structure, or impact, 
+                                                setting benchmarks across industries.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We rely on sharp legal insight, strategic clarity, and the smart use of
+                                                technology to deliver outcomes that aren't just smart – they are smarter than the rest.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <h1
-                                        class="text-3xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl lg:text-5xl mb-4">
-                                        Shreyas Shrivastava
-                                    </h1>
-                                    <h2 class="text-xl lg:text-2xl text-[#FFD54F] font-semibold mb-6 font-spartan">
-                                        Commercial Tax Litigation Specialist
-                                    </h2>
-                                    <p
-                                        class="text-base lg:text-lg text-[#EAEAEA]/90 font-normal font-nova leading-relaxed mb-8">
-                                        A seasoned Counsel at the Bombay High Court, renowned for meticulous approach to
-                                        litigation and unwavering commitment to the legal profession.
-                                    </p>
+                                    <!-- Signature and Title -->
+                                    <div class="border-t border-white/20 pt-6">
+                                        <div class="text-3xl lg:text-4xl text-[#FFD54F] font-script mb-2" style="font-family: 'Dancing Script', cursive;">
+                                            Vivek Sharma
+                                        </div>
+                                        <div class="text-lg text-[#EAEAEA]/80 font-medium font-spartan">
+                                            Founding Member
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide bg-white/10 border border-white/30 rounded-xl p-8 lg:p-12 shadow-2xl">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
+                                <!-- Left: Founder Image -->
+                                <div class="flex-shrink-0">
+                                    <div class="w-48 lg:w-72 h-full rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
+                                        <img src="images/logo2.png" alt="Managing Partner" class="w-full m- h-full object-cover">
+                                    </div>
+                                </div>
+                                <!-- Right: Content -->
+                                <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
+                                    <div>
+                                        <!-- Header with Orange Underline -->
+                                        <div class="mb-8">
+                                            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-spartan mb-2">
+                                                From The Founder's Desk
+                                            </h1>
+                                            <div class="w-24 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
+                                        </div>
+                                        <!-- Content Paragraphs -->
+                                        <div class="space-y-6 mb-8">
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                LexEtAl is a modern, innovation-led law firm that has built a reputation for
+                                                handling some of the most complex and high-stakes transactions ethically and
+                                                with precision.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We pride ourselves in collaborating with our clients and advising them on
+                                                matters that are first-of-their-kind, whether in scale, structure, or impact, 
+                                                setting benchmarks across industries.
+                                            </p>
+                                            <p class="text-base lg:text-lg text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                We rely on sharp legal insight, strategic clarity, and the smart use of
+                                                technology to deliver outcomes that aren't just smart – they are smarter than the rest.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- Signature and Title -->
+                                    <div class="border-t border-white/20 pt-6">
+                                        <div class="text-3xl lg:text-4xl text-[#FFD54F] font-script mb-2" style="font-family: 'Dancing Script', cursive;">
+                                            Deepak Kumar Jain
+                                        </div>
+                                        <div class="text-lg text-[#EAEAEA]/80 font-medium font-spartan">
+                                            Founder & Managing Partner
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -325,46 +408,31 @@
                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
                         <button class="dot active w-3 h-3 rounded-full bg-[#FFD54F] transition-all duration-300"
                             onclick="currentSlide(1)"></button>
-                        <button
-                            class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
+                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
                             onclick="currentSlide(2)"></button>
-                        <button
-                            class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
+                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
                             onclick="currentSlide(3)"></button>
+                        <button class="dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
+                            onclick="currentSlide(4)"></button>
                     </div>
 
                     <!-- Navigation Arrows -->
-                    <button
-                        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
+                    <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
                         onclick="prevSlide()">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                    <button
-                        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#FFD54F]/20 hover:bg-[#FFD54F]/40 backdrop-blur-sm border border-[#FFD54F]/30 rounded-full p-3 transition-all duration-300"
                         onclick="nextSlide()">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
-                </div>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col pt-6 sm:flex-row items-center justify-center gap-4">
-                    <a href="contact.html"
-                        class="group relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#FFD54F]/90 px-8 py-4 text-base font-semibold font-spartan text-[#1A1A1A] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                        <span class="relative z-10">Get Free Consultation</span>
-                    </a>
-                    <a href="services.html"
-                        class="group inline-block w-full sm:w-auto rounded-lg border-2 border-[#FFD54F]/60 text-[#FFD54F] px-8 py-4 text-base font-semibold font-spartan transition-all duration-300 hover:scale-105 hover:bg-[#FFD54F] hover:text-[#1A1A1A] hover:border-[#FFD54F] backdrop-blur-sm bg-white/5">
-                        Explore Services
-                    </a>
                 </div>
             </div>
         </section>
+
 
 
         <!-- About Snippet Section -->
@@ -1074,7 +1142,7 @@
     <!-- Hero Slider Script -->
     <script>
         let currentSlideIndex = 1;
-        const totalSlides = 3;
+        const totalSlides = 4;
         let autoSlideInterval;
 
         // Initialize slider
