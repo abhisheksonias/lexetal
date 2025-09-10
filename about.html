@@ -33,19 +33,7 @@
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'lexetal-light': '#eaeaea',
-                        'lexetal-dark': '#1a1a1a',
-                        'lexetal-accent': '#ffd54f',
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="js/tailwind-config.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -151,9 +139,9 @@
     <main>
 
         <section
-            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]"
-            style="background-image: url('images/Pattern3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-            <!-- Left: Content -->
+            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]">
+            <img src="images/Pattern3.png" alt="LexEtAl" class="absolute inset-0 w-full h-full object-cover">
+
             <div class="flex-1 flex flex-col justify-center px-6 py-16 lg:py-0 lg:pl-20 lg:pr-8 z-10 relative">
                 <!-- About Content -->
                 <div class="text-center lg:text-left">
@@ -173,7 +161,7 @@
                         business objectives.
                     </p>
 
-                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <!-- <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="#founders"
                             class="btn-shine relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan text-[#1A1A1A] shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[#FFD54F]/20">
                             Meet the Founders
@@ -182,7 +170,7 @@
                             class="inline-block w-full sm:w-auto rounded-lg border-2 border-[#FFD54F] text-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan transition-all duration-300 hover:scale-105 hover:bg-[#FFD54F] hover:text-[#1A1A1A]">
                             Our Story
                         </a>
-                    </div>
+                    </div> -->
 
                     <!-- Key values/statistics brand row -->
                     <div
@@ -621,11 +609,12 @@
                                 Taxes.
                             </p>
                             <div class="mt-4">
-                                <a href="deepak-profile.html" 
-                                   class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
+                                <a href="deepak-profile.html"
+                                    class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
                                     View Profile
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
                                     </svg>
                                 </a>
                             </div>
@@ -668,11 +657,12 @@
                                 collaborative platforms that advance the practice of tax law.
                             </p>
                             <div class="mt-4">
-                                <a href="vivek-profile.html" 
-                                   class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
+                                <a href="vivek-profile.html"
+                                    class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
                                     View Profile
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
                                     </svg>
                                 </a>
                             </div>
@@ -715,11 +705,12 @@
                                 commitment to the legal profession.
                             </p>
                             <div class="mt-4">
-                                <a href="shreyas-profile.html" 
-                                   class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
+                                <a href="shreyas-profile.html"
+                                    class="inline-flex items-center px-4 py-2 bg-[#FFD54F] text-[#1A1A1A] font-semibold rounded-lg hover:bg-[#FFD54F]/90 transition-all duration-300 hover:scale-105 text-sm font-spartan">
                                     View Profile
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
                                     </svg>
                                 </a>
                             </div>

@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
+        // Reset all links to default state first
+        link.classList.remove('nav-link-active');
+        
         if (href === currentPage) {
             // Add active styles
-            link.style.backgroundColor = '#ffd54f';
-            link.style.color = '#1a1a1a';
+            link.classList.add('nav-link-active');
         }
     });
 

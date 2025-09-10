@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav .hidden.lg\\:flex a[href*=".html"], nav #mobile-menu a[href*=".html"]');
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
+        // Reset all links to default state first
+        link.classList.remove('nav-link-active');
+        
         if (href === currentPage) {
             // Add active styles
-            link.style.backgroundColor = '#ffd54f';
-            link.style.color = '#1a1a1a';
+            link.classList.add('nav-link-active');
         }
     });
 
@@ -98,3 +100,63 @@ window.addEventListener('scroll', () => {
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+
+// Scroll animations for services page
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function handleScrollAnimations() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const slideLeftElements = document.querySelectorAll('.slide-in-left');
+    const slideRightElements = document.querySelectorAll('.slide-in-right');
+    const slideUpElements = document.querySelectorAll('.slide-in-up');
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+    fadeElements.forEach(el => {
+        if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('visible');
+        }
+    });
+
+    slideLeftElements.forEach(el => {
+        if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('visible');
+        }
+    });
+
+    slideRightElements.forEach(el => {
+        if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('visible');
+        }
+    });
+
+    slideUpElements.forEach(el => {
+        if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('visible');
+        }
+    });
+
+    scrollRevealElements.forEach(el => {
+        if (isElementInViewport(el) || el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+// Initialize scroll animations
+document.addEventListener('DOMContentLoaded', function() {
+    handleScrollAnimations();
+});
+
+// Check on scroll
+window.addEventListener('scroll', handleScrollAnimations);
+
+// Check on resize
+window.addEventListener('resize', handleScrollAnimations);
