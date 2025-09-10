@@ -1,0 +1,27 @@
+{
+  "channelId": "UC_YOUR_CHANNEL_ID",
+  "apiKey": "YOUR_YOUTUBE_API_KEY",
+  "playlistId": "UU_YOUR_UPLOADS_PLAYLIST_ID",
+  "maxResults": 6,
+  "videoSettings": {
+    "showFeatured": true,
+    "featuredVideoIndex": 0,
+    "gridLayout": true,
+    "autoPlay": false,
+    "showThumbnails": true,
+    "showDuration": true,
+    "showViews": true,
+    "showPublishDate": true
+  },
+  "fallbackVideos": [
+    {
+      "id": "dQw4w9WgXcQ",
+      "title": "Sample Video Title",
+      "description": "This is a sample video description that will be replaced with actual YouTube data.",
+      "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "publishedAt": "2025-01-15T10:00:00Z",
+      "duration": "PT3M32S",
+      "viewCount": "1000000"
+    }
+  ]
+}
