@@ -459,3 +459,74 @@ body {
 .form-group textarea:focus {
     transform: scale(1.02);
 }
+
+/* Hero Slider Styles */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.dot.active {
+    background-color: #FFD54F !important;
+    transform: scale(1.2);
+}
+
+/* Auto-advance animation */
+.slide-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FFD54F, #ffeb3b);
+    animation: progress 6s linear infinite;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Font classes */
+.font-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Hero background pattern */
+.hero-bg-pattern {
+    background-image: url('images/Pattern3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Scroll animation classes */
+.scroll-animation {
+    transition-property: opacity, transform;
+    will-change: transform, opacity;
+}

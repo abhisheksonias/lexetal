@@ -233,3 +233,154 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
     setTimeout(initScrollAnimations, 200);
 });
+
+// Hero Slider Script
+let currentSlideIndex = 1;
+const totalSlides = 4;
+let autoSlideInterval;
+
+// Initialize slider
+document.addEventListener('DOMContentLoaded', function () {
+    showSlide(currentSlideIndex);
+    startAutoSlide();
+});
+
+// Show specific slide
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    if (n > totalSlides) currentSlideIndex = 1;
+    if (n < 1) currentSlideIndex = totalSlides;
+
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Show current slide
+    if (slides[currentSlideIndex - 1]) {
+        slides[currentSlideIndex - 1].classList.add('active');
+    }
+    if (dots[currentSlideIndex - 1]) {
+        dots[currentSlideIndex - 1].classList.add('active');
+    }
+}
+
+// Go to specific slide
+function currentSlide(n) {
+    currentSlideIndex = n;
+    showSlide(currentSlideIndex);
+    resetAutoSlide();
+}
+
+// Next slide
+function nextSlide() {
+    currentSlideIndex++;
+    showSlide(currentSlideIndex);
+    resetAutoSlide();
+}
+
+// Previous slide
+function prevSlide() {
+    currentSlideIndex--;
+    showSlide(currentSlideIndex);
+    resetAutoSlide();
+}
+
+// Auto advance slides
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        currentSlideIndex++;
+        showSlide(currentSlideIndex);
+    }, 6000); // Change slide every 6 seconds
+}
+
+// Reset auto slide timer
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Initialize touch/swipe support for mobile
+function initTouchSupport() {
+    const sliderContainer = document.getElementById('hero-slider');
+    if (!sliderContainer) return;
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sliderContainer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    sliderContainer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide(); // Swipe left - next slide
+            } else {
+                prevSlide(); // Swipe right - previous slide
+            }
+        }
+    }
+}
+
+// Initialize slider hover effects
+function initSliderHoverEffects() {
+    const sliderContainer = document.getElementById('hero-slider');
+    if (!sliderContainer) return;
+
+    sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
+}
+
+// Initialize all slider functionality
+document.addEventListener('DOMContentLoaded', function() {
+    initTouchSupport();
+    initSliderHoverEffects();
+});
+
+// Initialize Brands & Clients Component
+function initBrandsClientsComponent() {
+    console.log('Loading brands-clients component...');
+
+    loadBrandsClients('brands-clients-container').then((success) => {
+        if (success) {
+            console.log('Brands-clients component loaded successfully');
+
+            // Check if customizeBrandsClients function exists
+            if (typeof customizeBrandsClients === 'function') {
+                console.log('Customizing brands-clients component...');
+                customizeBrandsClients({
+                    badgeText: "TRUSTED BY INDUSTRY LEADERS",
+                    title: "Our Prestigious Clients",
+                    description: "From Fortune 500 companies to emerging startups, we've earned the trust of organizations across industries through exceptional legal and tax advisory services."
+                });
+                console.log('Component customized successfully');
+            } else {
+                console.warn('customizeBrandsClients function not found');
+            }
+        } else {
+            console.error('Failed to load brands-clients component');
+        }
+    }).catch(error => {
+        console.error('Error loading component:', error);
+    });
+}
+
+// Initialize brands clients component when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initBrandsClientsComponent();
+});

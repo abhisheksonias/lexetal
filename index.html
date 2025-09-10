@@ -42,59 +42,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Hero Slider Styles -->
-    <style>
-        .slider-wrapper {
-            position: relative;
-            width: 100%;
-        }
-
-        .slide {
-            display: none;
-            animation: slideIn 0.5s ease-in-out;
-        }
-
-        .slide.active {
-            display: block;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .dot.active {
-            background-color: #FFD54F !important;
-            transform: scale(1.2);
-        }
-
-        /* Auto-advance animation */
-        .slide-progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #FFD54F, #ffeb3b);
-            animation: progress 6s linear infinite;
-        }
-
-        @keyframes progress {
-            from {
-                width: 0%;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -193,9 +140,8 @@
     <!-- Main Content -->
     <main class="flex-grow">
         <section
-            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]"
-            style="background-image: url('images/Pattern3.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
+            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]">
+            <img src="images/Pattern3.png" alt="Pattern" class="absolute inset-0 w-full h-full object-cover">
             <!-- Hero Content Card Slider -->
             <div class="relative z-10 w-full max-w-7xl mx-auto">
                 <!-- Slider Container -->
@@ -252,7 +198,7 @@
                                     <!-- Signature and Title -->
                                     <div class="border-t border-white/20 pt-4">
                                         <div class="text-2xl lg:text-3xl text-[#FFD54F] font-script mb-1"
-                                            style="font-family: 'Dancing Script', cursive;">
+                                            class="font-dancing">
                                             Deepak Kumar Jain
                                         </div>
                                         <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
@@ -314,7 +260,7 @@
                                     <!-- Signature and Title -->
                                     <div class="border-t border-white/20 pt-4">
                                         <div class="text-2xl lg:text-3xl text-[#FFD54F] font-script mb-1"
-                                            style="font-family: 'Dancing Script', cursive;">
+                                            class="font-dancing">
                                             Shreya Gupta
                                         </div>
                                         <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
@@ -376,7 +322,7 @@
                                     <!-- Signature and Title -->
                                     <div class="border-t border-white/20 pt-4">
                                         <div class="text-2xl lg:text-3xl text-[#FFD54F] font-script mb-1"
-                                            style="font-family: 'Dancing Script', cursive;">
+                                            class="font-dancing">
                                             Vivek Sharma
                                         </div>
                                         <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
@@ -438,7 +384,7 @@
                                     <!-- Signature and Title -->
                                     <div class="border-t border-white/20 pt-4">
                                         <div class="text-2xl lg:text-3xl text-[#FFD54F] font-script mb-1"
-                                            style="font-family: 'Dancing Script', cursive;">
+                                            class="font-dancing">
                                             Deepak Kumar Jain
                                         </div>
                                         <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
@@ -581,10 +527,10 @@
                 <div class="relative max-w-7xl mx-auto mb-16" id="core-pillars-circles">
                     <!-- Mobile: Horizontal Scroll Container -->
                     <div class="lg:hidden overflow-x-auto scrollbar-hide">
-                        <div class="flex space-x-8 px-4 pb-4" style="width: max-content;">
+                        <div class="flex space-x-8 px-4 pb-4 w-max">
                             <!-- Knowledge Circle -->
                             <div class="group relative flex-shrink-0 scroll-circle-left opacity-0 transform translate-x-[-150px] transition-all duration-1200 ease-out"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div class="flex flex-col items-center w-64">
                                     <div
                                         class="w-56 h-56 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer mb-6">
@@ -607,7 +553,7 @@
 
                             <!-- Integrity Circle -->
                             <div class="group relative flex-shrink-0 scroll-circle-center opacity-0 transform scale-90 transition-all duration-1000 ease-out delay-500"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div class="flex flex-col items-center w-64">
                                     <div
                                         class="w-64 h-64 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer mb-6">
@@ -629,7 +575,7 @@
 
                             <!-- Collaboration Circle -->
                             <div class="group relative flex-shrink-0 scroll-circle-right opacity-0 transform translate-x-[150px] transition-all duration-1200 ease-out delay-800"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div class="flex flex-col items-center w-64">
                                     <div
                                         class="w-56 h-56 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer mb-6">
@@ -657,7 +603,7 @@
                         <div class="relative flex flex-row items-center justify-center mb-12">
                             <!-- Knowledge Circle - Slides from Left -->
                             <div class="group relative mr-8 scroll-circle-left opacity-0 transform translate-x-[-150px] transition-all duration-1200 ease-out"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div
                                     class="w-56 h-56 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer">
                                     <div
@@ -673,7 +619,7 @@
 
                             <!-- Integrity Circle - Fixed Center (Always Visible) -->
                             <div class="group relative -mx-16 -mt-8 z-10 scroll-circle-center opacity-0 transform scale-90 transition-all duration-1000 ease-out delay-500"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div
                                     class="w-64 h-64 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer">
                                     <div
@@ -689,7 +635,7 @@
 
                             <!-- Collaboration Circle -->
                             <div class="group relative ml-8 scroll-circle-right opacity-0 transform translate-x-[150px] transition-all duration-1200 ease-out delay-800"
-                                style="transition-property: opacity, transform; will-change: transform, opacity;">
+                                class="scroll-animation">
                                 <div
                                     class="w-56 h-56 rounded-full border-4 border-lexetal-accent/40 bg-transparent flex items-center justify-center transition-all duration-500 hover:border-lexetal-accent hover:bg-gray-800/20 hover:scale-105 cursor-pointer">
                                     <div
@@ -706,7 +652,7 @@
 
                         <!-- Text Content - Desktop Layout -->
                         <div class="grid grid-cols-3 gap-8 max-w-4xl mx-auto scroll-text opacity-0 transform translate-y-[30px] transition-all duration-1000 ease-out delay-1200"
-                            style="transition-property: opacity, transform; will-change: transform, opacity;">
+                            class="scroll-animation">
                             <div class="text-center">
                                 <h3 class="text-2xl font-bold text-lexetal-accent mb-3">Knowledge</h3>
                                 <p class="text-gray-400 px-4">Expert guidance from top legal and tax specialists</p>
@@ -791,15 +737,9 @@
                             <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
 
                                 <!-- Icon -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-[#FFD54F]/80">
+                                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8">
                                     <!-- Heroicon: Building Library (solid) -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
-                                        class="w-10 h-10">
-                                        <path fill-rule="evenodd"
-                                            d="M12 2.25c-.41 0-.75.34-.75.75v1.19l-6.52 3.26A.75.75 0 004.5 8v1.25h15V8a.75.75 0 00-.73-.8l-6.52-3.26V3c0-.41-.34-.75-.75-.75zM3 10.25h18v1.5H3v-1.5zm1.5 3h2.25v6H4.5v-6zm4.5 0h2.25v6H9v-6zm4.5 0h2.25v6H13.5v-6zm4.5 0h2.25v6H18v-6zM3 20.75h18v1.5H3v-1.5z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                                    <img src="images/ta.png" alt="Tax Advisory" class="rounded-2xl">
                                 </div>
 
 
@@ -827,14 +767,9 @@
                             <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
 
                                 <!-- Icon -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-[#FFD54F]/80">
-                                    <!-- Heroicon: Gavel (solid) -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
-                                        class="w-10 h-10">
-                                        <path
-                                            d="M2.25 21a.75.75 0 0 1 .75-.75h9.5a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75Zm19.62-9.47-1.06 1.06a1.5 1.5 0 0 1-2.12 0l-2.12-2.12-2.83 2.83 2.12 2.12a1.5 1.5 0 0 1 0 2.12l-1.06 1.06a1.5 1.5 0 0 1-2.12 0l-7.07-7.07a1.5 1.5 0 0 1 0-2.12l1.06-1.06a1.5 1.5 0 0 1 2.12 0L12.88 12l2.83-2.83-2.12-2.12a1.5 1.5 0 0 1 0-2.12l1.06-1.06a1.5 1.5 0 0 1 2.12 0l7.07 7.07a1.5 1.5 0 0 1 0 2.12Z" />
-                                    </svg>
+                                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8">
+                                    <!-- Heroicon: Building Library (solid) -->
+                                    <img src="images/tl.png" alt="Tax Litigation" class="rounded-2xl">
                                 </div>
 
 
@@ -863,14 +798,9 @@
                             <div class="bg-gray-200 border border-gray-300/50 rounded-3xl p-8 text-center">
 
                                 <!-- Icon -->
-                                <div
-                                    class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-[#FFD54F]/80">
-                                    <!-- Heroicon: Gavel (solid - minimal) -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
-                                        class="w-10 h-10">
-                                        <path
-                                            d="M11.25 2.25a.75.75 0 0 1 1.06 0l3.44 3.44a.75.75 0 0 1 0 1.06L13.06 9.5l1.44 1.44 2.69-2.69a.75.75 0 0 1 1.06 0l3.44 3.44a.75.75 0 0 1 0 1.06l-2.69 2.69 1.19 1.19a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 0 1-1.06 0l-1.19-1.19-6.63 6.63a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 0-1.06l6.63-6.63L9.81 6.5 8.37 5.06a.75.75 0 0 1 0-1.06L9.43 2.25a.75.75 0 0 1 1.06 0l.76.76Z" />
-                                    </svg>
+                                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8">
+                                    <!-- Heroicon: Building Library (solid) -->
+                                    <img src="images/gst.png" alt="GST & Indirect Taxes" class="rounded-2xl">
                                 </div>
 
 
@@ -904,222 +834,8 @@
         <!-- Brands & Clients Section -->
 
 
-        <!-- Founding Team Section -->
-        <!-- <section class="bg-white py-20 lg:py-20">
-            <div class="container mx-auto px-4 lg:px-8">
-
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#FFD54F] mb-6">
-                        <span class="text-sm font-medium text-gray-600">MEET THE MIND'S BEHIND!</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
-                        Our Founding Team
-                    </h2>
-                    <p class="mt-5 text-lg text-[#333740]">
-                        Driven by a shared commitment to excellence, our founders bring decades of combined experience
-                        and visionary leadership to the firm.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-
-                    <div
-                        class="group relative bg-[#EAEAEA]/30 rounded-xl border-2 border-[#333740]/20 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-[#FFD54F]">
-                        <div class="relative overflow-hidden">
-                            <img class="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                src="/images/deepak.jpg" alt="Deepak Kumar Jain">
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#1A1A1A]/80 to-transparent transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div class="flex justify-center space-x-5">
-                                    <a href="https://linkedin.com/in/deepak-kumar-jain" class="text-white hover:text-[#FFD54F] transition-colors" target="_blank" rel="noopener noreferrer">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                        </svg>
-                                    </a>
-                                    <a href="mailto:deepak@lexetal.com" class="text-white hover:text-[#FFD54F] transition-colors">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Deepak Kumar Jain</h3>
-                            <p class="font-semibold mt-1 text-[#333740]">Chartered Accountant & Tax Advisory Expert</p>
-                            <p class="text-[#333740] mt-4 text-sm leading-relaxed">
-                                Deepak is a founding partner and a chartered Accountant, Company Secretary, and Law
-                                Graduate with 24+ years of post-qualification experience, specializing in Indirect
-                                Taxes.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="group relative bg-[#EAEAEA]/30 rounded-xl border-2 border-[#333740]/20 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-[#FFD54F]">
-                        <div class="relative overflow-hidden">
-                            <img class="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                src="/images/vivek.jpg" alt="Vivek Sarin">
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#1A1A1A]/80 to-transparent transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div class="flex justify-center space-x-5">
-                                    <a href="https://linkedin.com/in/vivek-sarin" class="text-white hover:text-[#FFD54F] transition-colors" target="_blank" rel="noopener noreferrer">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                        </svg>
-                                    </a>
-                                    <a href="mailto:vivek@lexetal.com" class="text-white hover:text-[#FFD54F] transition-colors">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Vivek Sarin</h3>
-                            <p class="font-semibold mt-1 text-[#333740]">Litigation Specialist & GST & Indirect Tax
-                                Advisor</p>
-                            <p class="text-[#333740] mt-4 text-sm leading-relaxed">
-                                Vivek Sarin is a Founding Partner at LexEtAl Global and is passionate about building
-                                collaborative platforms that advance the practice of tax law.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="group relative bg-[#EAEAEA]/30 rounded-xl border-2 border-[#333740]/20 text-center overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-[#FFD54F]">
-                        <div class="relative overflow-hidden">
-                            <img class="w-full h-80 object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
-                                src="/images/shreya.jpg" alt="Shreyas Shrivastava">
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-[#1A1A1A]/80 to-transparent transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div class="flex justify-center space-x-5">
-                                    <a href="https://linkedin.com/in/shreyas-shrivastava" class="text-white hover:text-[#FFD54F] transition-colors" target="_blank" rel="noopener noreferrer">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path
-                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                        </svg>
-                                    </a>
-                                    <a href="mailto:shreyas@lexetal.com" class="text-white hover:text-[#FFD54F] transition-colors">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-[#1A1A1A] font-spartan">Shreyas Shrivastava</h3>
-                            <p class="text-[#333740] font-semibold mt-1">Commercial Tax Litigation Specialist</p>
-                            <p class="text-[#333740] mt-4 text-sm leading-relaxed">
-                                Shreyas Shrivastava is a Founding Partner at LexEtAl Global and is a seasoned Counsel at
-                                the Bombay High Court, renowned for his meticulous approach to litigation and unwavering
-                                commitment to the legal profession.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
 
 
-        <!-- Testimonials Section -->
-        <!-- <section class="bg-gray-900 py-20 lg:py-20 overflow-hidden">
-            <style>
-                .hide-scrollbar::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .hide-scrollbar {
-                    -ms-overflow-style: none;
-                    /* IE and Edge */
-                    scrollbar-width: none;
-                    /* Firefox */
-                }
-            </style>
-
-            <div class="container mx-auto px-4 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <p class="text-sm font-semibold text-yellow-500 uppercase tracking-widest mb-4">
-                        What Our Clients Say
-                    </p>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                        Trusted by Industry Leaders
-                    </h2>
-                </div>
-
-                <div class="flex overflow-x-auto gap-6 lg:gap-8 snap-x snap-mandatory pb-8 hide-scrollbar -mx-4 px-4">
-
-                    <div class="flex-shrink-0 w-[90%] md:w-[45%] lg:w-[31%] snap-center">
-                        <div
-                            class="h-full bg-gray-800/50 p-8 rounded-xl border border-gray-700 flex flex-col justify-between">
-                            <div>
-                                <svg class="w-10 h-10 text-yellow-500/30 mb-5" fill="currentColor" viewBox="0 0 32 32">
-                                    <path
-                                        d="M9.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14c0.74,0.54,1.5,0.81,2.28,0.81 c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2 c-0.84,0-1.64,0.31-2.39,0.94S9.33,11.56,9.33,12.49z M21.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14 c0.74,0.54,1.5,0.81,2.28,0.81c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2c-0.84,0-1.64,0.31-2.39,0.94S21.33,11.56,21.33,12.49z">
-                                    </path>
-                                </svg>
-                                <p class="text-white text-lg leading-relaxed italic">
-                                    "Lexetal provided exceptional guidance during our company's merger. Their attention
-                                    to detail and strategic advice were invaluable to our success."
-                                </p>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-700">
-                                <h4 class="text-lg font-bold text-yellow-400">Robert Williams</h4>
-                                <p class="text-gray-400 text-sm mt-1">CEO, Tech Innovations</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-shrink-0 w-[90%] md:w-[45%] lg:w-[31%] snap-center">
-                        <div
-                            class="h-full bg-gray-800/50 p-8 rounded-xl border border-gray-700 flex flex-col justify-between">
-                            <div>
-                                <svg class="w-10 h-10 text-yellow-500/30 mb-5" fill="currentColor" viewBox="0 0 32 32">
-                                    <path
-                                        d="M9.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14c0.74,0.54,1.5,0.81,2.28,0.81 c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2 c-0.84,0-1.64,0.31-2.39,0.94S9.33,11.56,9.33,12.49z M21.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14 c0.74,0.54,1.5,0.81,2.28,0.81c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2c-0.84,0-1.64,0.31-2.39,0.94S21.33,11.56,21.33,12.49z">
-                                    </path>
-                                </svg>
-                                <p class="text-white text-lg leading-relaxed italic">
-                                    "The tax advisory services from Lexetal have saved my business thousands. Their team
-                                    is responsive, knowledgeable, and always goes the extra mile."
-                                </p>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-700">
-                                <h4 class="text-lg font-bold text-yellow-400">Sarah Thompson</h4>
-                                <p class="text-gray-400 text-sm mt-1">Small Business Owner</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex-shrink-0 w-[90%] md:w-[45%] lg:w-[31%] snap-center">
-                        <div
-                            class="h-full bg-gray-800/50 p-8 rounded-xl border border-gray-700 flex flex-col justify-between">
-                            <div>
-                                <svg class="w-10 h-10 text-yellow-500/30 mb-5" fill="currentColor" viewBox="0 0 32 32">
-                                    <path
-                                        d="M9.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14c0.74,0.54,1.5,0.81,2.28,0.81 c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2 c-0.84,0-1.64,0.31-2.39,0.94S9.33,11.56,9.33,12.49z M21.33,12.49c0,1.3,0.2,2.39,0.59,3.27c0.4,0.88,0.96,1.6,1.7,2.14 c0.74,0.54,1.5,0.81,2.28,0.81c1.1,0,2.01-0.42,2.72-1.25c0.72-0.83,1.08-1.93,1.08-3.29c0-1.21-0.33-2.22-1-3.02s-1.55-1.2-2.65-1.2c-0.84,0-1.64,0.31-2.39,0.94S21.33,11.56,21.33,12.49z">
-                                    </path>
-                                </svg>
-                                <p class="text-white text-lg leading-relaxed italic">
-                                    "We've been working with Lexetal for over five years, and their consistent
-                                    excellence in handling our international tax matters has been remarkable."
-                                </p>
-                            </div>
-                            <div class="mt-6 pt-6 border-t border-gray-700">
-                                <h4 class="text-lg font-bold text-yellow-400">David Chen</h4>
-                                <p class="text-gray-400 text-sm mt-1">CFO, Global Enterprises</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
 
         <!-- Brands & Clients Section -->
         <div id="brands-clients-container">
@@ -1377,143 +1093,6 @@
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
 
-    <!-- Hero Slider Script -->
-    <script>
-        let currentSlideIndex = 1;
-        const totalSlides = 4;
-        let autoSlideInterval;
-
-        // Initialize slider
-        document.addEventListener('DOMContentLoaded', function () {
-            showSlide(currentSlideIndex);
-            startAutoSlide();
-        });
-
-        // Show specific slide
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-
-            if (n > totalSlides) currentSlideIndex = 1;
-            if (n < 1) currentSlideIndex = totalSlides;
-
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // Show current slide
-            if (slides[currentSlideIndex - 1]) {
-                slides[currentSlideIndex - 1].classList.add('active');
-            }
-            if (dots[currentSlideIndex - 1]) {
-                dots[currentSlideIndex - 1].classList.add('active');
-            }
-        }
-
-        // Go to specific slide
-        function currentSlide(n) {
-            currentSlideIndex = n;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Next slide
-        function nextSlide() {
-            currentSlideIndex++;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Previous slide
-        function prevSlide() {
-            currentSlideIndex--;
-            showSlide(currentSlideIndex);
-            resetAutoSlide();
-        }
-
-        // Auto advance slides
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                currentSlideIndex++;
-                showSlide(currentSlideIndex);
-            }, 6000); // Change slide every 6 seconds
-        }
-
-        // Reset auto slide timer
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Pause auto slide on hover
-        const sliderContainer = document.getElementById('hero-slider');
-        if (sliderContainer) {
-            sliderContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-
-            sliderContainer.addEventListener('mouseleave', () => {
-                startAutoSlide();
-            });
-        }
-
-        // Touch/swipe support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        if (sliderContainer) {
-            sliderContainer.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            sliderContainer.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-        }
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide(); // Swipe left - next slide
-                } else {
-                    prevSlide(); // Swipe right - previous slide
-                }
-            }
-        }
-    </script>
-
-    <!-- Initialize Brands & Clients Component -->
-    <script>
-        // Load the brands-clients component with debugging
-        console.log('Loading brands-clients component...');
-
-        loadBrandsClients('brands-clients-container').then((success) => {
-            if (success) {
-                console.log('Brands-clients component loaded successfully');
-
-                // Check if customizeBrandsClients function exists
-                if (typeof customizeBrandsClients === 'function') {
-                    console.log('Customizing brands-clients component...');
-                    customizeBrandsClients({
-                        badgeText: "TRUSTED BY INDUSTRY LEADERS",
-                        title: "Our Prestigious Clients",
-                        description: "From Fortune 500 companies to emerging startups, we've earned the trust of organizations across industries through exceptional legal and tax advisory services."
-                    });
-                    console.log('Component customized successfully');
-                } else {
-                    console.warn('customizeBrandsClients function not found');
-                }
-            } else {
-                console.error('Failed to load brands-clients component');
-            }
-        }).catch(error => {
-            console.error('Error loading component:', error);
-        });
-    </script>
 </body>
 
 </html>
