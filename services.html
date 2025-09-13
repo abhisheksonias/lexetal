@@ -32,6 +32,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
     <link rel="shortcut icon" href="/favicon.png">
 
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
@@ -138,131 +145,96 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section
-            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A] hero-bg-pattern">
-            <img src="images/Pattern3.png" alt="Pattern" class="absolute inset-0 w-full h-full object-cover">
-            <div class="flex-1 flex flex-col justify-center px-6 py-16 lg:py-0 lg:pl-20 lg:pr-8 z-10 relative">
-                <!-- Services Content -->
-                <div class="text-center lg:text-left">
-                    <div
-                        class="inline-flex items-center px-4 py-1.5 rounded-full mb-6 border border-[#FFD54F]/30 bg-[#333740]">
-                        <span class="text-sm font-medium text-[#FFD54F] font-spartan">Professional Excellence Since 2010
-                        </span>
-                    </div>
+        <!-- Editorial Hero Section -->
+        <section class="relative min-h-auto bg-white overflow-hidden">
 
-                    <h1
-                        class="text-4xl font-extrabold tracking-tight text-white font-spartan sm:text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in-up">
-                        Our <span class="text-[#FFD54F]">Services</span>.
-                    </h1>
-                    <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-[#EAEAEA]/80 md:text-xl font-normal font-nova">
-                        Expert guidance for every stage of your tax journey-
-                        advisory, compliance, and dispute resolution under
-                        one roof.
-                    </p>
-
-                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#services"
-                            class="btn-shine relative inline-block w-full sm:w-auto overflow-hidden rounded-lg bg-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan text-[#1A1A1A] shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[#FFD54F]/20">
-                            Explore Services
-                        </a>
-                        <a href="#consultation"
-                            class="inline-block w-full sm:w-auto rounded-lg border-2 border-[#FFD54F] text-[#FFD54F] px-8 py-3.5 text-base font-semibold font-spartan transition-all duration-300 hover:scale-105 hover:bg-[#FFD54F] hover:text-[#1A1A1A]">
-                            Get Consultation
-                        </a>
-                    </div>
-
-                    <!-- Key service statistics brand row -->
-                    <div
-                        class="mt-12 flex flex-wrap justify-center lg:justify-start gap-4 text-xs text-[#FFD54F] font-spartan">
-                        <span>✓ 99% Success Rate</span>
-                        <span class="w-1 h-1 bg-[#FFD54F]/60 rounded-full"></span>
-                        <span>✓ Expert Legal Team</span>
-                    </div>
-                </div>
+            <!-- Subtle Abstract Background -->
+            <div class="absolute inset-0 opacity-[0.08]">
+                <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                    <defs>
+                        <pattern id="hexagonal" width="20" height="17.32" patternUnits="userSpaceOnUse">
+                            <!-- Hexagon pattern -->
+                            <path d="M10 0 L17.32 4.33 L17.32 13 L10 17.32 L2.68 13 L2.68 4.33 Z" fill="none"
+                                stroke="#333740" stroke-width="0.3" opacity="0.6" />
+                            <!-- Connecting lines between hexagons -->
+                            <path d="M10 0 L10 -8.66" fill="none" stroke="#333740" stroke-width="0.2" opacity="0.4" />
+                            <path d="M17.32 4.33 L25.98 0" fill="none" stroke="#333740" stroke-width="0.2"
+                                opacity="0.4" />
+                            <path d="M2.68 4.33 L-5.98 0" fill="none" stroke="#333740" stroke-width="0.2"
+                                opacity="0.4" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#hexagonal)" />
+                </svg>
             </div>
 
-            <!-- Right: Visual Content -->
-            <div class="hidden lg:flex flex-1 items-center justify-center relative h-full overflow-hidden">
-                <div class="w-full h-full flex items-center justify-center relative">
-                    <div class="mx-auto w-full max-w-md">
-                        <div
-                            class="bg-[#333740]/50 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl">
-                            <div
-                                class="bg-gradient-to-br from-[#333740] to-[#1A1A1A] rounded-xl sm:rounded-2xl p-6 lg:p-8 text-[#EAEAEA] relative overflow-hidden border border-[#FFD54F]/20">
-                                <div class="absolute inset-0 opacity-5">
-                                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-                                        <defs>
-                                            <pattern id="serviceGrid" width="10" height="10"
-                                                patternUnits="userSpaceOnUse">
-                                                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#EAEAEA"
-                                                    stroke-width="0.3" />
-                                            </pattern>
-                                        </defs>
-                                        <rect width="100" height="100" fill="url(#serviceGrid)" />
-                                    </svg>
-                                </div>
-                                <div class="relative z-10">
-                                    <div class="text-center mb-4 sm:mb-6">
-                                        <div
-                                            class="w-14 h-14 bg-[#FFD54F]/20 border border-[#FFD54F]/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <svg class="w-8 h-8 text-[#FFD54F]" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </div>
-                                        <h3
-                                            class="text-lg sm:text-xl lg:text-2xl font-bold mb-2 font-spartan text-[#EAEAEA]">
-                                            Our Service
-                                            Areas</h3>
-                                        <p class="text-[#EAEAEA]/70 text-sm sm:text-base font-nova">Tax • Legal •
-                                            Compliance
-                                        </p>
+            <div class="relative z-10 w-full max-w-8xl mx-auto px-8 lg:px-10 py-20 lg:py-25">
+                <div class="grid lg:grid-cols-12 gap-16 items-center min-h-[80vh]">
+
+                    <!-- Left: Vertical Brand Text (A&O Shearman Style) -->
+                    <div class="lg:col-span-2 flex items-center">
+                        <div class="transform -rotate-90 whitespace-nowrap lg:block hidden">
+                            <span class="text-sm font-light text-[#666] tracking-[0.2em] uppercase">Services</span>
+                            <span class="text-2xl font-bold text-[#1A1A1A] ml-4">LexEtAl</span>
+                        </div>
+                    </div>
+
+                    <!-- Center: Main Content -->
+                    <div class="lg:col-span-6  space-y-16">
+
+                        <!-- Main Headline -->
+                        <div class="space-y-5">
+
+                            <h1 class="text-5xl lg:text-6xl font-bold leading-[0.9] text-[#1A1A1A] font-proza">
+                                Comprehensive<br>
+                                Legal and Tax<br>
+                                <span class="text-[#FFD54F]">Solutions.</span>
+                            </h1>
+
+                            <p class="text-xl lg:text-2xl text-[#333] leading-relaxed max-w-3xl font-light">
+                                Expert guidance for every stage of your tax journey- advisory, compliance, and dispute
+                                resolution under one roof.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Services Image -->
+                    <div class="lg:col-span-4 flex items-center justify-center">
+                        <div class="relative w-full max-w-md">
+                            <!-- Main Services Image -->
+                            <div class="relative overflow-hidden rounded-2xl s">
+                                <img src="images/serviceside.png" alt="LexEtAl Services - Legal and Tax Consulting" 
+                                     class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105">
+                                
+                                <!-- Overlay with subtle gradient -->
+                                <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#1A1A1A]/20 to-[#333740]/30 opacity-0 hover:opacity-100 transition-opacity duration-300"></div> -->
+                            </div>
+                            
+                            <!-- Floating Service Cards -->
+                            <div class="absolute -top-4 -right-4 bg-white rounded-xl p-4 shadow-lg border border-[#FFD54F]/20">
+                                <div class="flex items-center space-x-3">
+                                    <div>
+                                        <p class="text-sm font-semibold text-[#1A1A1A]">Expert Advisory</p>
+                                        <p class="text-xs text-[#333740]">Tax & Legal</p>
                                     </div>
-                                    <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                                        <div
-                                            class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
-                                            <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
-                                                Tax
-                                                Law</div>
-                                            <div class="text-[#EAEAEA]/60 text-xs font-nova">Expertise</div>
-                                        </div>
-                                        <div
-                                            class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
-                                            <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
-                                                Legal
-                                                Aid</div>
-                                            <div class="text-[#EAEAEA]/60 text-xs font-nova">Support</div>
-                                        </div>
-                                        <div
-                                            class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
-                                            <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
-                                                Compliance</div>
-                                            <div class="text-[#EAEAEA]/60 text-xs font-nova">Management</div>
-                                        </div>
-                                        <div
-                                            class="bg-[#333740]/60 border border-[#FFD54F]/20 rounded-lg p-2 sm:p-3 text-center">
-                                            <div class="font-bold text-sm sm:text-lg mb-1 font-spartan text-[#FFD54F]">
-                                                Consulting</div>
-                                            <div class="text-[#EAEAEA]/60 text-xs font-nova">Strategic</div>
-                                        </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-lg border border-[#26A69A]/20">
+                                <div class="flex items-center space-x-3">
+                                    <div>
+                                        <p class="text-sm font-semibold text-[#1A1A1A]">Litigation Support</p>
+                                        <p class="text-xs text-[#333740]">Court & Tribunal</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Floating Elements matching brand colors -->
-                        <div
-                            class="absolute -top-4 -right-4 w-12 h-12 bg-[#FFD54F]/20 rounded-full blur-lg floating-animation">
-                        </div>
-                        <div
-                            class="absolute -bottom-4 -left-4 w-8 h-8 bg-[#333740]/30 rounded-full blur-md floating-animation animation-delay-3s">
-                        </div>
                     </div>
+                      
                 </div>
             </div>
-        </section>
 
+        </section>
 
         <!-- Services Overview Section -->
         <section class="py-20 bg-white">

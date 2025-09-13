@@ -11,6 +11,8 @@ tailwind.config = {
             fontFamily: {
                 'spartan': ['League Spartan', 'sans-serif'],
                 'nova': ['Inter', 'sans-serif'],
+                'serif': ['Playfair Display', 'serif'],
+                'sans': ['Inter', 'sans-serif'],
             }
         }
     }
