@@ -149,43 +149,51 @@ html {
         padding: 1rem;
     }
     
-    /* Mobile slider adjustments */
+    /* Mobile slider adjustments - Increased card height */
     .slide {
-        padding: 1rem !important;
+        padding: 2rem !important;
+        min-height: 500px !important;
     }
     
-    /* Mobile text sizing */
+    /* Mobile text sizing - Increased font sizes */
     .mobile-text-sm {
-        font-size: 0.875rem;
-        line-height: 1.5;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Mobile paragraph text - Increased size and left aligned */
+    .slide p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+    }
+    
+    /* Mobile heading adjustments - Increased size */
+    .mobile-heading {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    /* Mobile signature adjustments - Increased size */
+    .mobile-signature {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+    
+    /* Mobile main tagline adjustments - Increased size */
+    .mobile-main-tagline {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        padding: 0 1rem;
     }
     
     /* Mobile spacing adjustments */
     .mobile-space-y-2 > * + * {
-        margin-top: 0.5rem;
-    }
-    
-    .mobile-space-y-3 > * + * {
         margin-top: 0.75rem;
     }
     
-    /* Mobile heading adjustments */
-    .mobile-heading {
-        font-size: 1.25rem;
-        line-height: 1.3;
-    }
-    
-    /* Mobile signature adjustments */
-    .mobile-signature {
-        font-size: 1.125rem;
-        line-height: 1.2;
-    }
-    
-    /* Mobile main tagline adjustments */
-    .mobile-main-tagline {
-        font-size: 1.125rem;
-        line-height: 1.4;
-        padding: 0 1rem;
+    .mobile-space-y-3 > * + * {
+        margin-top: 1rem;
     }
 }
 
