@@ -195,6 +195,15 @@ html {
     .mobile-space-y-3 > * + * {
         margin-top: 1rem;
     }
+    
+    /* About page mobile adjustments - Reduce gap between hero and about section */
+    .about-hero-section {
+        padding-bottom: 0.5rem !important;
+    }
+    
+    .about-content-section {
+        padding-top: 0.5rem !important;
+    }
 }
 
 #mobile-menu {
