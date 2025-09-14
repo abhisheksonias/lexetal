@@ -140,7 +140,7 @@
     <!-- Main Content -->
     <main class="flex-grow">
         <section
-            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[700px] px-6 py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]">
+            class="relative flex items-center justify-center h-[calc(100vh-80px)] min-h-[500px] lg:min-h-[700px] px-4 sm:px-6 py-8 lg:py-16 overflow-hidden bg-gradient-to-br from-[#1A1A1A] via-[#333740] to-[#1A1A1A]">
             <img src="images/Pattern3.png" alt="Pattern" class="absolute inset-0 w-full h-full object-cover">
             <!-- Hero Content Card Slider -->
             <div class="relative z-10 w-full max-w-7xl mx-auto">
@@ -150,9 +150,8 @@
                         <!-- Slide 1 -->
                         <div class="slide active bg-white/10 border border-white/30 rounded-xl p-6 lg:p-8 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8">
-                                <!-- Left: Founder Image -->
-
-                                <div class="flex-shrink-0">
+                                <!-- Left: Founder Image - Hidden on mobile -->
+                                <div class="hidden lg:block flex-shrink-0">
                                     <div
                                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
                                         <img src="images/hero.png" alt="Managing Partner"
@@ -163,16 +162,16 @@
                                 <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
                                     <div>
                                         <!-- Header with Orange Underline -->
-                                        <div class="mb-6">
+                                        <div class="mb-4 lg:mb-6">
                                             <h1
-                                                class="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
+                                                class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
                                                 About the Firm
                                             </h1>
                                             <div class="w-20 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
                                         </div>
                                         <!-- Content Paragraphs -->
-                                        <div class="space-y-4 mb-6 mr-2">
-                                            <p class="text-xl  text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                        <div class="space-y-3 lg:space-y-4 mb-4 lg:mb-6 mr-0 lg:mr-2">
+                                            <p class="text-sm sm:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
                                                 LexEtAl Global is India’s premier collective of tax professionals,
                                                 bringing together advoctes, chartered accountants, company secretaries,
                                                 regulators, and specialists from across the nation and beyond. Anchored
@@ -197,11 +196,11 @@
                                         </div>
                                     </div>
                                     <!-- Signature and Title -->
-                                    <div class="border-t border-white/20 pt-4">
-                                        <div class="text-2xl lg:text-3xl text-[#FFD54F] font-spartan mb-1">
+                                    <div class="border-t border-white/20 pt-3 lg:pt-4">
+                                        <div class="text-xl sm:text-2xl lg:text-3xl text-[#FFD54F] font-spartan mb-1">
                                             LexEtAl.
                                         </div>
-                                        <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
+                                        <div class="text-sm sm:text-base text-[#EAEAEA]/80 font-medium font-spartan">
                                             Professional Law and Tax Consultancy
                                         </div>
                                     </div>
@@ -212,8 +211,8 @@
                         <!-- Slide 2 -->
                         <div class="slide bg-white/10 border border-white/30 rounded-xl p-6 lg:p-8 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
+                                <!-- Left: Founder Image - Hidden on mobile -->
+                                <div class="hidden lg:block flex-shrink-0">
                                     <div
                                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
                                         <img src="images/deepak.jpg" alt="Managing Partner"
@@ -224,17 +223,17 @@
                                 <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
                                     <div>
                                         <!-- Header with Orange Underline -->
-                                        <div class="mb-6">
+                                        <div class="mb-4 lg:mb-6">
                                             <h1
-                                                class="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
+                                                class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
                                                 From The Founder's Desk
                                             </h1>
                                             <div class="w-20 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
                                         </div>
                                         <!-- Content Paragraphs -->
-                                        <div class="space-y-4 mb-6 mr-5">
+                                        <div class="space-y-3 lg:space-y-4 mb-4 lg:mb-6 mr-0 lg:mr-5">
                                             <p
-                                                class="text-sm lg:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                class="text-sm sm:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
                                                 LexEtAl, we see the practice of law as more than just solving problems
                                                 but also shaping the future.
                                             </p>
@@ -259,11 +258,11 @@
                                         </div>
                                     </div>
                                     <!-- Signature and Title -->
-                                    <div class="border-t border-white/20 pt-4">
-                                        <div class="text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
+                                    <div class="border-t border-white/20 pt-3 lg:pt-4">
+                                        <div class="text-xl sm:text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
                                             Deepak Kumar Jain
                                         </div>
-                                        <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
+                                        <div class="text-sm sm:text-base text-[#EAEAEA]/80 font-medium font-spartan">
                                             Founding Member
                                         </div>
                                     </div>
@@ -274,8 +273,8 @@
                         <!-- Slide 3 -->
                         <div class="slide bg-white/10 border border-white/30 rounded-xl p-6 lg:p-8 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
+                                <!-- Left: Founder Image - Hidden on mobile -->
+                                <div class="hidden lg:block flex-shrink-0">
                                     <div
                                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
                                         <img src="images/vivek.jpg" alt="Managing Partner"
@@ -286,17 +285,17 @@
                                 <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
                                     <div>
                                         <!-- Header with Orange Underline -->
-                                        <div class="mb-6">
+                                        <div class="mb-4 lg:mb-6">
                                             <h1
-                                                class="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
+                                                class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
                                                 From The Founder's Desk
                                             </h1>
                                             <div class="w-20 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
                                         </div>
                                         <!-- Content Paragraphs -->
-                                        <div class="space-y-4 mb-6 mr-5">
+                                        <div class="space-y-3 lg:space-y-4 mb-4 lg:mb-6 mr-0 lg:mr-5">
                                             <p
-                                                class="text-sm lg:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                class="text-sm sm:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
                                                 LexEtAl was founded on a belief: that the practice of law, when done
                                                 with integrity and innovation, has the power to redefine industries.
                                             </p>
@@ -316,11 +315,11 @@
                                         </div>
                                     </div>
                                     <!-- Signature and Title -->
-                                    <div class="border-t border-white/20 pt-4">
-                                        <div class="text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
+                                    <div class="border-t border-white/20 pt-3 lg:pt-4">
+                                        <div class="text-xl sm:text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
                                             Vivek Sarin
                                         </div>
-                                        <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
+                                        <div class="text-sm sm:text-base text-[#EAEAEA]/80 font-medium font-spartan">
                                             Founding Member
                                         </div>
                                     </div>
@@ -331,8 +330,8 @@
                         <!-- Slide 4 -->
                         <div class="slide bg-white/10 border border-white/30 rounded-xl p-6 lg:p-8 shadow-2xl">
                             <div class="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8">
-                                <!-- Left: Founder Image -->
-                                <div class="flex-shrink-0">
+                                <!-- Left: Founder Image - Hidden on mobile -->
+                                <div class="hidden lg:block flex-shrink-0">
                                     <div
                                         class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl overflow-hidden border-4 border-[#FFD54F]/30 shadow-xl">
                                         <img src="images/shreya.jpg" alt="Managing Partner"
@@ -343,17 +342,17 @@
                                 <div class="flex-1 text-center lg:text-left flex flex-col justify-between">
                                     <div>
                                         <!-- Header with Orange Underline -->
-                                        <div class="mb-6">
+                                        <div class="mb-4 lg:mb-6">
                                             <h1
-                                                class="text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
+                                                class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white font-spartan mb-2">
                                                 From The Founder's Desk
                                             </h1>
                                             <div class="w-20 h-1 bg-[#FF6B35] rounded-full mx-auto lg:mx-0"></div>
                                         </div>
                                         <!-- Content Paragraphs -->
-                                        <div class="space-y-4 mb-6 mr-5">
+                                        <div class="space-y-3 lg:space-y-4 mb-4 lg:mb-6 mr-0 lg:mr-5">
                                             <p
-                                                class="text-sm lg:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
+                                                class="text-sm sm:text-base text-[#EAEAEA]/95 font-normal font-nova leading-relaxed">
                                                 At LexEtAl, we are building the law firm of tomorrow which is modern,
                                                 innovation-led, and uncompromising in our ethics.
                                             </p>
@@ -376,11 +375,11 @@
                                         </div>
                                     </div>
                                     <!-- Signature and Title -->
-                                    <div class="border-t border-white/20 pt-4">
-                                        <div class="text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
+                                    <div class="border-t border-white/20 pt-3 lg:pt-4">
+                                        <div class="text-xl sm:text-2xl lg:text-3xl text-[#FFD54F] font-dancing mb-1">
                                             Shreyas Shrivastava
                                         </div>
-                                        <div class="text-base text-[#EAEAEA]/80 font-medium font-spartan">
+                                        <div class="text-sm sm:text-base text-[#EAEAEA]/80 font-medium font-spartan">
                                             Founding Member
                                         </div>
                                     </div>
@@ -425,26 +424,12 @@
                 </div>
 
                 <!-- Main Tagline Heading -->
-                <div class="relative z-10 w-full max-w-6xl mx-auto mt-12 text-center">
-                    <!-- <h1 class="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-white italic font-spartan tracking-tight leading-tight">
-                        <span class="text-white">
-                            India's Premier Network of 
-                        </span>
-                        <br>
-                        <span class="text-white">
-                            Tax & Legal Professionals
-                        </span>
-                    </h1> -->
-
-                    <h1 class="text-4xl font-bold text-white italic font-spartan tracking-tight leading-tight">
+                <div class="relative z-10 w-full max-w-6xl mx-auto mt-8 lg:mt-12 text-center px-4">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white italic font-spartan tracking-tight leading-tight">
                         <span class="text-white">
                             Building a trusted community of tax professionals to simplify complexity and shape the
                             future of taxation.
                         </span>
-                        <!-- <br> -->
-                        <!-- <span class="text-white">
-                            Tax & Legal Professionals
-                        </span> -->
                     </h1>
                 </div>
             </div>

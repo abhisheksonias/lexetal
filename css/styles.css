@@ -142,6 +142,53 @@ html {
     }
 }
 
+/* Mobile Hero Section Responsive Styles */
+@media (max-width: 1023px) {
+    /* Hero section mobile adjustments */
+    .hero-mobile-padding {
+        padding: 1rem;
+    }
+    
+    /* Mobile slider adjustments */
+    .slide {
+        padding: 1rem !important;
+    }
+    
+    /* Mobile text sizing */
+    .mobile-text-sm {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    /* Mobile spacing adjustments */
+    .mobile-space-y-2 > * + * {
+        margin-top: 0.5rem;
+    }
+    
+    .mobile-space-y-3 > * + * {
+        margin-top: 0.75rem;
+    }
+    
+    /* Mobile heading adjustments */
+    .mobile-heading {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    /* Mobile signature adjustments */
+    .mobile-signature {
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
+    
+    /* Mobile main tagline adjustments */
+    .mobile-main-tagline {
+        font-size: 1.125rem;
+        line-height: 1.4;
+        padding: 0 1rem;
+    }
+}
+
 #mobile-menu {
     z-index: 40;
 }
